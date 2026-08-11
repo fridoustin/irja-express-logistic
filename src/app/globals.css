@@ -1222,3 +1222,218 @@ footer ul a:hover {
 .why-card .service-link {
   color: var(--green-700);
 }
+
+/* ===== CAREER: JOB LISTINGS ===== */
+.job-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-top: 40px;
+}
+.job-card {
+  background: var(--tan-100);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 36px;
+  transition:
+    background 0.4s var(--ease),
+    transform 0.4s var(--ease);
+}
+.job-card:hover {
+  background: var(--white);
+  transform: translateY(-3px);
+}
+.job-card-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  margin-bottom: 22px;
+  padding-bottom: 22px;
+  border-bottom: 1px solid var(--line);
+}
+.job-card-head h3 {
+  font-family: var(--font-display), sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  text-transform: uppercase;
+  color: var(--green-800);
+}
+.job-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.job-meta .chip {
+  font-family: var(--font-mono), monospace;
+  font-size: 11.5px;
+  letter-spacing: 0.04em;
+  padding: 6px 14px;
+  border: 1px solid var(--tan-300);
+  border-radius: 999px;
+  color: var(--green-700);
+  background: var(--tan-200);
+}
+.job-card-body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-bottom: 26px;
+}
+.job-card-body h4 {
+  font-family: var(--font-mono), monospace;
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--green-600);
+  margin-bottom: 12px;
+}
+.job-card-body ul {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.job-card-body li {
+  font-size: 14.5px;
+  line-height: 1.6;
+  color: var(--charcoal-60);
+  padding-left: 18px;
+  position: relative;
+}
+.job-card-body li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 9px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--green-600);
+}
+
+.job-empty {
+  margin: 40px auto 0;
+  max-width: 560px;
+  text-align: center;
+  padding: 56px 40px;
+  border: 1px dashed var(--tan-300);
+  border-radius: 4px;
+  background: var(--tan-100);
+}
+.job-empty svg {
+  width: 44px;
+  height: 44px;
+  color: var(--tan-300);
+  margin: 0 auto 20px;
+}
+.job-empty p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--charcoal-60);
+}
+
+@media (max-width: 720px) {
+  .job-card-body {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+/* ===== CAREER: APPLICATION FORM ===== */
+.career-form {
+  max-width: 760px;
+  margin-top: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+}
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.field label {
+  font-family: var(--font-mono), monospace;
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--green-800);
+}
+.field .hint {
+  text-transform: none;
+  letter-spacing: 0;
+  color: var(--charcoal-60);
+  font-size: 11.5px;
+}
+.field input[type="text"],
+.field input[type="email"],
+.field input[type="tel"],
+.field select,
+.field textarea {
+  font-family: var(--font-body), sans-serif;
+  font-size: 15px;
+  padding: 13px 16px;
+  border: 1.5px solid var(--line);
+  border-radius: 2px;
+  background: var(--white);
+  color: var(--charcoal);
+  transition: border-color 0.3s var(--ease);
+}
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+  outline: none;
+  border-color: var(--green-600);
+}
+.field textarea {
+  resize: vertical;
+  min-height: 110px;
+}
+.field input[type="file"] {
+  font-family: var(--font-body), sans-serif;
+  font-size: 13.5px;
+  padding: 11px 4px;
+  color: var(--charcoal-60);
+}
+.field input[type="file"]::file-selector-button {
+  font-family: var(--font-display), sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 12.5px;
+  letter-spacing: 0.03em;
+  padding: 9px 16px;
+  margin-right: 14px;
+  border: none;
+  border-radius: 2px;
+  background: var(--green-700);
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.3s var(--ease);
+}
+.field input[type="file"]::file-selector-button:hover {
+  background: var(--green-800);
+}
+.career-form .btn {
+  align-self: flex-start;
+}
+.form-note {
+  font-size: 13.5px;
+  line-height: 1.6;
+  color: var(--green-700);
+  background: var(--tan-200);
+  border: 1px solid var(--tan-300);
+  border-radius: 2px;
+  padding: 14px 18px;
+}
+
+@media (max-width: 640px) {
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+}
