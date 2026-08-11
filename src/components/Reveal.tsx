@@ -6,10 +6,12 @@ export default function Reveal({
   children,
   className = "",
   as: Tag = "div",
+  ...rest
 }: {
   children: ReactNode;
   className?: string;
   as?: keyof React.JSX.IntrinsicElements;
+  [key: string]: unknown;
 }) {
   const ref = useRef<HTMLDivElement | null>(null);
   const [visible, setVisible] = useState(false);
@@ -35,6 +37,7 @@ export default function Reveal({
     <Component
       ref={ref}
       className={`reveal ${visible ? "in" : ""} ${className}`.trim()}
+      {...rest}
     >
       {children}
     </Component>

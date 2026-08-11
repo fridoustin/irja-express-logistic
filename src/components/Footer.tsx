@@ -21,7 +21,7 @@ export default function Footer() {
             <ul>
               <li><Link href="/">Home</Link></li>
               <li><Link href="/about">About Us</Link></li>
-              <li><Link href="/#services">Services</Link></li>
+              <li><Link href="/services">Services</Link></li>
               <li><Link href="/gallery">Gallery</Link></li>
               <li><Link href="/career">Career</Link></li>
             </ul>
@@ -29,10 +29,10 @@ export default function Footer() {
           <div>
             <h4>Layanan</h4>
             <ul>
-              <li><Link href="/#services">Pengiriman Darat</Link></li>
-              <li><Link href="/#services">Ekspedisi Laut</Link></li>
-              <li><Link href="/#services">Ekspedisi Udara</Link></li>
-              <li><Link href="/#services">Pergudangan</Link></li>
+              <li><Link href="/services/trucking">Pengiriman Darat</Link></li>
+              <li><Link href="/services/sea-freight">Ekspedisi Laut</Link></li>
+              <li><Link href="/services/air-freight">Ekspedisi Udara</Link></li>
+              <li><Link href="/services/warehousing">Pergudangan</Link></li>
             </ul>
           </div>
           <div>

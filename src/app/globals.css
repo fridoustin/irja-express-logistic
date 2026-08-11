@@ -1161,3 +1161,24 @@ footer ul a:hover {
     padding: 150px 0 56px;
   }
 }
+
+/* ===== SERVICE DETAIL: FLEET CHIPS ===== */
+.fleet-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+}
+.fleet-chips .chip {
+  font-family: var(--font-mono), monospace;
+  font-size: 12.5px;
+  letter-spacing: 0.04em;
+  padding: 10px 18px;
+  border: 1px solid var(--tan-300);
+  border-radius: 999px;
+  color: var(--green-800);
+  background: var(--tan-100);
+}
+.why-card .service-link {
+  color: var(--green-700);
+}
