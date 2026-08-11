@@ -36,6 +36,19 @@ export default function Header() {
     if (!window.location.hash) window.scrollTo(0, 0);
   }, [pathname]);
 
+  useEffect(() => {
+    document.body.style.overflow = mobileOpen ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [mobileOpen]);
+
+  function isActive(href: string) {
+    if (href === "#contact") return false;
+    if (href === "/") return pathname === "/";
+    return pathname.startsWith(href);
+  }
+
   return (
     <>
       <header className={`site-header ${scrolled ? "scrolled" : ""}`}>
@@ -51,12 +64,7 @@ export default function Header() {
             <ul>
               {NAV_ITEMS.map((item) => (
                 <li key={item.href}>
-                  <Link
-                    href={item.href}
-                    className={
-                      item.href === "/" ? (pathname === "/" ? "active" : "") : pathname.startsWith(item.href) && item.href !== "#contact" ? "active" : ""
-                    }
-                  >
+                  <Link href={item.href} className={isActive(item.href) ? "active" : ""}>
                     {item.label}
                   </Link>
                 </li>
@@ -69,8 +77,9 @@ export default function Header() {
             </Link>
           </div>
           <button
-            className="burger"
-            aria-label="Buka menu"
+            className={`burger ${mobileOpen ? "open" : ""}`}
+            aria-label={mobileOpen ? "Tutup menu" : "Buka menu"}
+            aria-expanded={mobileOpen}
             onClick={() => setMobileOpen((v) => !v)}
           >
             <span />
@@ -80,9 +89,19 @@ export default function Header() {
         </div>
       </header>
 
+      <div
+        className={`mobile-nav-overlay ${mobileOpen ? "open" : ""}`}
+        onClick={() => setMobileOpen(false)}
+        aria-hidden="true"
+      />
       <div className={`mobile-nav ${mobileOpen ? "open" : ""}`}>
         {NAV_ITEMS.map((item) => (
-          <Link key={item.href} href={item.href} onClick={() => setMobileOpen(false)}>
+          <Link
+            key={item.href}
+            href={item.href}
+            className={isActive(item.href) ? "active" : ""}
+            onClick={() => setMobileOpen(false)}
+          >
             {item.label}
           </Link>
         ))}
