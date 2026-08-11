@@ -8,30 +8,36 @@ const COMPANY_EMAIL = "hrd@irjaexpress.co.id";
 export default function CareerApplicationForm({ jobs }: { jobs: Job[] }) {
   const [sent, setSent] = useState(false);
 
-  function handleSubmit(e: FormEvent<HTMLFormElement>) {
+  async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    const data = new FormData(e.currentTarget);
-    const name = data.get("name");
-    const email = data.get("email");
-    const phone = data.get("phone");
-    const position = data.get("position");
-    const message = data.get("message");
 
-    const subject = `Lamaran Kerja - ${position} - ${name}`;
-    const body = [
-      `Nama: ${name}`,
-      `Email: ${email}`,
-      `No. WhatsApp: ${phone}`,
-      `Posisi yang Dilamar: ${position}`,
-      "",
-      "Pesan:",
-      message || "-",
-      "",
-      "(Mohon lampirkan CV & dokumen pendukung secara manual pada email ini)",
-    ].join("\n");
+    const form = e.currentTarget;
+    const formData = new FormData(form);
 
-    window.location.href = `mailto:${COMPANY_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    setSent(true);
+    try {
+      const response = await fetch("/api/apply", {
+        method: "POST",
+        body: formData,
+      });
+
+      const result = await response.json();
+
+      if (!response.ok) {
+        throw new Error(result.error || "Gagal mengirim lamaran.");
+      }
+
+      setSent(true);
+
+      form.reset();
+    } catch (error) {
+      console.error("Submit error:", error);
+
+      alert(
+        error instanceof Error
+          ? error.message
+          : "Terjadi kesalahan saat mengirim lamaran."
+      );
+    }
   }
 
   return (
@@ -97,8 +103,7 @@ export default function CareerApplicationForm({ jobs }: { jobs: Job[] }) {
 
       {sent && (
         <p className="form-note">
-          Aplikasi email Anda akan terbuka dengan data yang sudah terisi — mohon lampirkan
-          file CV &amp; dokumen pendukung secara manual sebelum menekan kirim.
+          Lamaran berhasil dikirim. CV dan dokumen pendukung telah diteruskan ke tim HR.
         </p>
       )}
     </form>
