@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
+import { escapeHtml, isValidEmail, isRateLimited, clientKey } from "@/lib/security";
 
 const RESEND_API_KEY = process.env.RESEND_API_KEY;
 const COMPANY_EMAIL = process.env.COMPANY_EMAIL;
@@ -7,15 +8,14 @@ if (!COMPANY_EMAIL) {
   throw new Error("COMPANY_EMAIL belum dikonfigurasi.");
 }
 
-function escapeHtml(value: string) {
-  return String(value)
-    .replace(/&/g, "&amp;")
-    .replace(/</g, "&lt;")
-    .replace(/>/g, "&gt;")
-    .replace(/"/g, "&quot;");
-}
-
 export async function POST(req: NextRequest) {
+  if (isRateLimited(`contact:${clientKey(req)}`)) {
+    return NextResponse.json(
+      { error: "Terlalu banyak percobaan. Coba lagi dalam beberapa menit." },
+      { status: 429 }
+    );
+  }
+
   let body: Record<string, string>;
   try {
     body = await req.json();
@@ -27,6 +27,10 @@ export async function POST(req: NextRequest) {
 
   if (!name || !email || !phone || !message) {
     return NextResponse.json({ error: "Mohon lengkapi semua kolom wajib." }, { status: 400 });
+  }
+
+  if (!isValidEmail(email)) {
+    return NextResponse.json({ error: "Format email tidak valid." }, { status: 400 });
   }
 
   if (!RESEND_API_KEY) {
