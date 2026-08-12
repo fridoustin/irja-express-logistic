@@ -125,8 +125,8 @@ export default function Contact() {
           </div>
 
           <Reveal className="map-embed">
-            <iframe
-              src="https://www.google.com/maps?q=Surabaya,Jawa+Timur&output=embed"
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d9307.350623105778!2d112.7234465!3d-7.247314!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7f9de9aba3909%3A0x8525907af2994d3!2sPT%20IRJA%20EXPRESS%20LOGISTIC%20OFFICE!5e1!3m2!1sen!2sid!4v1786507520494!5m2!1sen!2sid"
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
               title="Lokasi PT Irja Express Logistic"
