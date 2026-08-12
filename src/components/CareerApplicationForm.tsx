@@ -3,8 +3,6 @@
 import { FormEvent, useState } from "react";
 import { Job } from "@/data/careers";
 
-const COMPANY_EMAIL = "hrd@irjaexpress.co.id";
-
 export default function CareerApplicationForm({ jobs }: { jobs: Job[] }) {
   const [sent, setSent] = useState(false);
 
