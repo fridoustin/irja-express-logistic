@@ -1,9 +1,9 @@
 :root {
-  --green-900: #16281a;
-  --green-800: #1f3d23;
-  --green-700: #2f5233;
-  --green-600: #3e6b43;
-  --green-500: #4f7942;
+  --green-900: #214229;
+  --green-800: #2d5a37;
+  --green-700: #397246;
+  --green-600: #458a55;
+  --green-500: #559e65;
   --tan-300: #d8c3a0;
   --tan-200: #e6d7ba;
   --tan-100: #f5efe3;
@@ -259,9 +259,9 @@ header.site-header.scrolled .brand img {
   align-items: center;
   background: linear-gradient(
     160deg,
-    var(--green-900) 0%,
-    var(--green-800) 45%,
-    var(--green-700) 100%
+    var(--green-800) 0%,
+    var(--green-700) 45%,
+    var(--green-600) 100%
   );
   overflow: hidden;
   padding-top: 110px;
@@ -396,12 +396,12 @@ header.site-header.scrolled .brand img {
 
 /* generic section spacing */
 section {
-  padding: 120px 0;
+  padding: 64px 0;
   position: relative;
 }
 .section-head {
   max-width: 640px;
-  margin-bottom: 64px;
+  margin-bottom: 44px;
 }
 .section-head h2 {
   font-size: clamp(32px, 4vw, 48px);
@@ -452,6 +452,8 @@ section {
 /* ===== OVERVIEW ===== */
 .overview {
   background: var(--cream);
+  background-image: radial-gradient(rgba(33, 66, 41, 0.07) 1px, transparent 1px);
+  background-size: 24px 24px;
 }
 .overview .wrap {
   display: grid;
@@ -464,7 +466,7 @@ section {
   aspect-ratio: 1 / 1.05;
   border-radius: 4px;
   overflow: hidden;
-  background: linear-gradient(150deg, var(--green-700), var(--green-900));
+  background: linear-gradient(150deg, var(--green-700), var(--green-800));
 }
 .overview-visual svg {
   position: absolute;
@@ -479,8 +481,8 @@ section {
 }
 .overview-badge {
   position: absolute;
-  left: -30px;
-  bottom: -26px;
+  left: 24px;
+  bottom: 24px;
   background: var(--tan-200);
   border: 1px solid var(--tan-300);
   padding: 22px 26px;
@@ -542,6 +544,8 @@ section {
 /* ===== WHY CHOOSE US ===== */
 .why {
   background: var(--tan-100);
+  background-image: radial-gradient(rgba(33, 66, 41, 0.07) 1px, transparent 1px);
+  background-size: 24px 24px;
 }
 .why-grid {
   display: grid;
@@ -595,7 +599,7 @@ section {
 
 /* ===== SERVICES ===== */
 .services {
-  background: var(--green-900);
+  background: var(--green-700);
   color: #fff;
 }
 .services .section-head h2 {
@@ -617,7 +621,7 @@ section {
   background: rgba(255, 255, 255, 0.12);
 }
 .service-card {
-  background: var(--green-900);
+  background: var(--green-700);
   padding: 40px 34px 34px;
   transition: background 0.4s var(--ease);
   display: flex;
@@ -813,10 +817,10 @@ section {
 
 /* ===== CTA ===== */
 .cta {
-  background: linear-gradient(135deg, var(--green-700), var(--green-900));
+  background: linear-gradient(135deg, var(--green-700), var(--green-800));
   color: #fff;
   text-align: center;
-  padding: 110px 0;
+  padding: 64px 0;
   position: relative;
   overflow: hidden;
 }
@@ -855,7 +859,7 @@ section {
 
 /* ===== FOOTER ===== */
 footer {
-  background: var(--green-900);
+  background: var(--green-700);
   color: rgba(255, 255, 255, 0.7);
   padding: 80px 0 30px;
 }
@@ -968,7 +972,7 @@ footer ul a:hover {
   left: 0;
   bottom: 0;
   width: min(320px, 82vw);
-  background: var(--green-900);
+  background: var(--green-700);
   z-index: 1050;
   display: flex;
   flex-direction: column;
@@ -1046,7 +1050,7 @@ footer ul a:hover {
     grid-template-columns: 1fr;
   }
   section {
-    padding: 80px 0;
+    padding: 48px 0;
   }
   .overview-badge {
     position: static;
@@ -1065,7 +1069,7 @@ footer ul a:hover {
 
 /* ===== PAGE BANNER (inner pages) ===== */
 .page-banner {
-  background: linear-gradient(160deg, var(--green-900) 0%, var(--green-700) 100%);
+  background: linear-gradient(160deg, var(--green-800) 0%, var(--green-700) 100%);
   padding: 190px 0 70px;
   color: #fff;
 }
@@ -1086,6 +1090,8 @@ footer ul a:hover {
 /* ===== ABOUT: PROFILE / LICENSE GRIDS ===== */
 .profile {
   background: var(--cream);
+  background-image: radial-gradient(rgba(33, 66, 41, 0.07) 1px, transparent 1px);
+  background-size: 24px 24px;
 }
 .profile-grid,
 .license-grid {
@@ -1140,7 +1146,7 @@ footer ul a:hover {
 
 /* ===== ABOUT: VISION & MISSION ===== */
 .vm {
-  background: var(--green-900);
+  background: var(--green-700);
   color: #fff;
 }
 .vm-grid {
@@ -1452,7 +1458,7 @@ footer ul a:hover {
   border: none;
   padding: 0;
   cursor: zoom-in;
-  background: linear-gradient(150deg, var(--green-700), var(--green-900));
+  background: linear-gradient(150deg, var(--green-700), var(--green-800));
   text-align: left;
   transition: transform 0.4s var(--ease);
 }
@@ -1553,7 +1559,7 @@ footer ul a:hover {
   align-items: center;
   justify-content: center;
   color: rgba(216, 195, 160, 0.45);
-  background: linear-gradient(150deg, var(--green-700), var(--green-900));
+  background: linear-gradient(150deg, var(--green-700), var(--green-800));
   border-radius: 2px;
 }
 .lightbox-placeholder svg {
