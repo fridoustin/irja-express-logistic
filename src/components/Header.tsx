@@ -11,7 +11,7 @@ const NAV_ITEMS = [
   { href: "/services", label: "Services" },
   { href: "/gallery", label: "Gallery" },
   { href: "/career", label: "Career" },
-  { href: "#contact", label: "Contact" },
+  { href: "/contact", label: "Contact" },
 ];
 
 export default function Header() {
@@ -44,7 +44,6 @@ export default function Header() {
   }, [mobileOpen]);
 
   function isActive(href: string) {
-    if (href === "#contact") return false;
     if (href === "/") return pathname === "/";
     return pathname.startsWith(href);
   }
@@ -72,7 +71,7 @@ export default function Header() {
             </ul>
           </nav>
           <div className="header-cta">
-            <Link href="#contact" className="btn btn-primary">
+            <Link href="/contact" className="btn btn-primary">
               Hubungi Kami
             </Link>
           </div>

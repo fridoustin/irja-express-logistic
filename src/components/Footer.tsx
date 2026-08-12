@@ -24,6 +24,7 @@ export default function Footer() {
               <li><Link href="/services">Services</Link></li>
               <li><Link href="/gallery">Gallery</Link></li>
               <li><Link href="/career">Career</Link></li>
+              <li><Link href="/contact">Contact</Link></li>
             </ul>
           </div>
           <div>
