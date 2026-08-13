@@ -1186,6 +1186,33 @@ footer ul a:hover {
   grid-template-columns: 1fr 1fr;
   gap: 70px;
 }
+.vm-figure {
+  aspect-ratio: 16 / 9;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  color: rgba(255, 255, 255, 0.45);
+  margin-bottom: 28px;
+}
+.vm-figure .icon {
+  width: 44px;
+  height: 44px;
+}
+.vm-figure .icon svg {
+  width: 100%;
+  height: 100%;
+}
+.vm-figure span {
+  font-family: var(--font-mono), monospace;
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
 .vm-block h2 {
   font-family: var(--font-display), sans-serif;
   font-weight: 800;
@@ -1927,5 +1954,79 @@ footer ul a:hover {
     flex: none;
     width: 100%;
     aspect-ratio: 16 / 9;
+  }
+}
+
+/* ===== ABOUT: COMPANY VALUES (IRJA monogram cards) ===== */
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2px;
+  background: var(--line);
+  border: 1px solid var(--line);
+}
+.value-card {
+  position: relative;
+  background: var(--tan-100);
+  padding: 40px 30px 34px;
+  overflow: hidden;
+  transition: background 0.4s var(--ease), transform 0.4s var(--ease);
+}
+.value-card:hover {
+  background: var(--white);
+  transform: translateY(-4px);
+}
+.value-letter {
+  position: absolute;
+  top: -18px;
+  right: 6px;
+  font-family: var(--font-display), sans-serif;
+  font-weight: 800;
+  font-size: 130px;
+  line-height: 1;
+  color: var(--green-700);
+  opacity: 0.08;
+  pointer-events: none;
+  transition: opacity 0.4s var(--ease);
+}
+.value-card:hover .value-letter {
+  opacity: 0.14;
+}
+.value-card h3 {
+  position: relative;
+  z-index: 1;
+  font-family: var(--font-display), sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--green-800);
+  margin-bottom: 12px;
+}
+.value-tagline {
+  position: relative;
+  z-index: 1;
+  font-weight: 600;
+  font-size: 14.5px;
+  line-height: 1.55;
+  color: var(--green-700);
+  margin-bottom: 14px;
+}
+.value-desc {
+  position: relative;
+  z-index: 1;
+  font-size: 13.5px;
+  line-height: 1.75;
+  color: var(--charcoal-60);
+}
+
+@media (max-width: 980px) {
+  .values-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 600px) {
+  .values-grid {
+    grid-template-columns: 1fr;
   }
 }

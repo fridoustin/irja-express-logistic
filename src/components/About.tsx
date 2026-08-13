@@ -37,6 +37,14 @@ const HISTORY_PLACEHOLDER_ICON = (
   </svg>
 );
 
+const VISION_PLACEHOLDER_ICON = (
+  <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1.6">
+    <rect x="5" y="9" width="38" height="30" rx="2" />
+    <path d="M5 32l10-10 8 8 8-11 12 13" />
+    <circle cx="17" cy="18" r="3" />
+  </svg>
+);
+
 const MISSION = [
   "Memberikan layanan ekspedisi yang aman dan terpercaya.",
   "Mengembangkan jaringan distribusi ke seluruh wilayah Indonesia.",
@@ -49,71 +57,28 @@ const MISSION = [
 
 const VALUES = [
   {
-    idx: "01",
+    letter: "I",
     title: "Integritas",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus luctus nec.",
-    icon: (
-      <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M24 5l16 6v11c0 10-7 17-16 21C15 39 8 32 8 22V11z" />
-        <path d="M18 24l4 4 8-8" />
-      </svg>
-    ),
+    tagline: "Bekerja dengan jujur, bertanggung jawab, dan dapat dipercaya.",
+    desc: "Kami menjunjung tinggi kejujuran dan tanggung jawab dalam setiap proses. Bagi kami, kepercayaan pelanggan bukan sekadar bagian dari bisnis, tetapi merupakan amanah yang harus dijaga.",
   },
   {
-    idx: "02",
-    title: "Kerja Sama Tim",
-    desc: "Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi.",
-    icon: (
-      <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
-        <circle cx="17" cy="16" r="6" />
-        <circle cx="33" cy="16" r="6" />
-        <path d="M6 40c0-7 5-12 11-12s11 5 11 12M20 40c0-7 5-12 11-12s11 5 11 12" />
-      </svg>
-    ),
+    letter: "R",
+    title: "Responsif",
+    tagline: "Cepat memahami, cepat bertindak, tepat memberikan solusi.",
+    desc: "Kami memahami bahwa kebutuhan logistik dapat berubah dan setiap pengiriman memiliki tantangannya sendiri. Karena itu, kami mengutamakan komunikasi yang cepat, tanggap, dan solutif dalam melayani pelanggan.",
   },
   {
-    idx: "03",
-    title: "Keunggulan",
-    desc: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.",
-    icon: (
-      <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M24 4l5.6 11.6L42 17.2l-9 8.8 2.1 12.4L24 32.6l-11.1 5.8L15 26 6 17.2l12.4-1.6z" />
-      </svg>
-    ),
+    letter: "J",
+    title: "Jembatan",
+    tagline: "Menghubungkan kebutuhan, wilayah, dan peluang.",
+    desc: "Kami hadir sebagai penghubung antara pelanggan, barang, dan berbagai wilayah di Indonesia. Dari Surabaya hingga Papua dan seluruh penjuru Indonesia, kami membangun konektivitas yang mendukung kelancaran distribusi dan rantai pasok.",
   },
   {
-    idx: "04",
-    title: "Fokus Pelanggan",
-    desc: "Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia.",
-    icon: (
-      <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
-        <circle cx="24" cy="24" r="18" />
-        <circle cx="24" cy="24" r="9" />
-        <circle cx="24" cy="24" r="1.6" fill="currentColor" />
-      </svg>
-    ),
-  },
-  {
-    idx: "05",
-    title: "Keselamatan Kerja",
-    desc: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium.",
-    icon: (
-      <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M24 6v10M24 32v10M6 24h10M32 24h10" />
-        <circle cx="24" cy="24" r="7" />
-      </svg>
-    ),
-  },
-  {
-    idx: "06",
-    title: "Tanggung Jawab",
-    desc: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis.",
-    icon: (
-      <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
-        <rect x="8" y="14" width="32" height="24" rx="2" />
-        <path d="M16 14v-3a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v3" />
-      </svg>
-    ),
+    letter: "A",
+    title: "Andal",
+    tagline: "Konsisten dalam memberikan layanan yang aman dan terpercaya.",
+    desc: "Keandalan dibangun melalui pengalaman, koordinasi, dan kerja sama tim. Dengan dukungan tim kantor, gudang, pelabuhan, serta jaringan operasional di berbagai daerah, kami berkomitmen memastikan setiap proses pengiriman berjalan secara terkoordinasi dan bertanggung jawab.",
   },
 ];
 
@@ -167,6 +132,10 @@ export default function About() {
       <section className="vm">
         <div className="wrap vm-grid">
           <Reveal className="vm-block">
+            <div className="vm-figure">
+              <div className="icon">{VISION_PLACEHOLDER_ICON}</div>
+              <span>Foto menyusul</span>
+            </div>
             <span className="eyebrow on-dark">Vision</span>
             <h2>Visi Perusahaan</h2>
             <p>
@@ -198,17 +167,22 @@ export default function About() {
           <Reveal className="section-head">
             <span className="eyebrow">Company Values</span>
             <h2>Nilai-Nilai Perusahaan</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis.</p>
+            <p>
+              Di balik setiap pengiriman, terdapat kepercayaan yang harus
+              dijaga. IRJA menjadikan integritas, responsivitas, kerja sama,
+              dan keandalan sebagai fondasi dalam memberikan layanan logistik
+              terbaik bagi pelanggan.
+            </p>
           </Reveal>
         </div>
         <div className="wrap">
-          <div className="why-grid stagger">
+          <div className="values-grid stagger">
             {VALUES.map((item) => (
-              <Reveal key={item.idx} className="why-card">
-                <span className="idx">{item.idx}</span>
-                <div className="icon">{item.icon}</div>
+              <Reveal key={item.letter} className="value-card">
+                <span className="value-letter">{item.letter}</span>
                 <h3>{item.title}</h3>
-                <p>{item.desc}</p>
+                <p className="value-tagline">{item.tagline}</p>
+                <p className="value-desc">{item.desc}</p>
               </Reveal>
             ))}
           </div>
