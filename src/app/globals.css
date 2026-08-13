@@ -385,7 +385,7 @@ section {
   position: relative;
 }
 .section-head {
-  max-width: 640px;
+  max-width: 1000px;
   margin-bottom: 44px;
 }
 .section-head h2 {
@@ -401,7 +401,7 @@ section {
   font-size: 16.5px;
   line-height: 1.75;
   color: var(--charcoal-60);
-  max-width: 560px;
+  max-width: 8000px;
 }
 
 .reveal {
@@ -1135,32 +1135,23 @@ footer ul a:hover {
   background-image: radial-gradient(rgba(33, 66, 41, 0.07) 1px, transparent 1px);
   background-size: 24px 24px;
 }
-.profile-grid,
 .license-grid {
   display: grid;
   gap: 2px;
   background: var(--line);
   border: 1px solid var(--line);
   margin-top: 8px;
-}
-.profile-grid {
-  grid-template-columns: repeat(3, 1fr);
-}
-.license-grid {
   grid-template-columns: repeat(4, 1fr);
 }
-.profile-card,
 .license-card {
   background: var(--tan-100);
   padding: 40px 32px;
   transition: background 0.4s var(--ease), transform 0.4s var(--ease);
 }
-.profile-card:hover,
 .license-card:hover {
   background: var(--white);
   transform: translateY(-4px);
 }
-.profile-card h3,
 .license-card h3 {
   font-family: var(--font-display), sans-serif;
   font-weight: 700;
@@ -1169,7 +1160,6 @@ footer ul a:hover {
   color: var(--green-800);
   margin-bottom: 12px;
 }
-.profile-card p,
 .license-card p {
   font-size: 14.5px;
   line-height: 1.75;
@@ -1230,9 +1220,6 @@ footer ul a:hover {
 }
 
 @media (max-width: 980px) {
-  .profile-grid {
-    grid-template-columns: 1fr;
-  }
   .license-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -1867,5 +1854,78 @@ footer ul a:hover {
 @media (max-width: 980px) {
   .branch-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+/* ===== ABOUT: HISTORY / LATAR BELAKANG (alternating image + text) ===== */
+.history-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 64px;
+  margin-top: 56px;
+}
+.history-row.reverse {
+  flex-direction: row-reverse;
+}
+.history-figure {
+  flex: 0 0 38%;
+  position: sticky;
+  top: 110px;
+  aspect-ratio: 4 / 5;
+  border-radius: 4px;
+  background: linear-gradient(150deg, var(--green-700), var(--green-800));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  color: rgba(255, 255, 255, 0.5);
+}
+.history-figure .icon {
+  width: 56px;
+  height: 56px;
+}
+.history-figure .icon svg {
+  width: 100%;
+  height: 100%;
+}
+.history-figure span {
+  font-family: var(--font-mono), monospace;
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.history-text {
+  flex: 1 1 auto;
+}
+.history-text h3 {
+  font-family: var(--font-display), sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  text-transform: uppercase;
+  color: var(--green-800);
+  margin-bottom: 20px;
+}
+.history-text p {
+  font-size: 15px;
+  line-height: 1.85;
+  color: var(--charcoal-60);
+  margin-bottom: 18px;
+}
+.history-text p:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 980px) {
+  .history-row,
+  .history-row.reverse {
+    flex-direction: column;
+    gap: 28px;
+  }
+  .history-figure {
+    position: static;
+    flex: none;
+    width: 100%;
+    aspect-ratio: 16 / 9;
   }
 }
