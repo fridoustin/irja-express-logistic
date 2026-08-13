@@ -4,6 +4,7 @@ const HISTORY = [
   {
     title: "Sejarah Perusahaan",
     imageSide: "left" as const,
+    image: "/images/sejarah.jpg",
     paragraphs: [
       "PT Irja Express Logistic didirikan pada tahun 2017 oleh Bapak Tri Setyo Handoko, berawal dari kebutuhan akan layanan ekspedisi yang aman, terpercaya, dan mampu mendukung distribusi barang menuju wilayah Indonesia Timur, khususnya Papua.",
       "Sejak awal berdiri sebagai CV Irja Express Logistic, perusahaan telah membangun pengalaman dalam menangani berbagai jenis pengiriman, mulai dari bahan bangunan, kendaraan pribadi dan kendaraan berat, bahan makanan, hingga berbagai kebutuhan bisnis dan komersial lainnya.",
@@ -18,6 +19,7 @@ const HISTORY = [
   {
     title: "Latar Belakang",
     imageSide: "right" as const,
+    image: "/images/latarbelakang.jpg",
     paragraphs: [
       "Perkembangan perdagangan dan distribusi barang di Indonesia mendorong kebutuhan akan layanan logistik yang semakin efisien, aman, dan mampu menjangkau berbagai wilayah. Sebagai negara kepulauan dengan wilayah geografis yang luas, konektivitas antarpulau menjadi bagian penting dalam mendukung kelancaran rantai pasok, baik bagi pelaku usaha maupun masyarakat.",
       "Dalam konteks tersebut, Surabaya memiliki posisi strategis sebagai salah satu pusat perdagangan, industri, dan distribusi utama di Indonesia. Didukung oleh infrastruktur perdagangan, pergudangan, serta akses pelabuhan yang menunjang aktivitas logistik, Surabaya menjadi salah satu titik penting dalam pergerakan barang antarpulau. Letaknya yang strategis juga menjadikan Surabaya sebagai salah satu pintu gerbang utama menuju kawasan Indonesia Timur.",
@@ -37,13 +39,6 @@ const HISTORY_PLACEHOLDER_ICON = (
   </svg>
 );
 
-const VISION_PLACEHOLDER_ICON = (
-  <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1.6">
-    <rect x="5" y="9" width="38" height="30" rx="2" />
-    <path d="M5 32l10-10 8 8 8-11 12 13" />
-    <circle cx="17" cy="18" r="3" />
-  </svg>
-);
 
 const MISSION = [
   "Memberikan layanan ekspedisi yang aman dan terpercaya.",
@@ -114,10 +109,10 @@ export default function About() {
           </Reveal>
           {HISTORY.map((item) => (
             <div key={item.title} className={`history-row ${item.imageSide === "right" ? "reverse" : ""}`}>
-              <Reveal className="history-figure">
-                <div className="icon">{HISTORY_PLACEHOLDER_ICON}</div>
-                <span>Foto menyusul</span>
-              </Reveal>
+              <div
+                className="history-figure"
+                style={{ backgroundImage: `url(${item.image})` }}
+              />
               <Reveal className="history-text">
                 <h3>{item.title}</h3>
                 {item.paragraphs.map((p, i) => (
@@ -132,10 +127,7 @@ export default function About() {
       <section className="vm">
         <div className="wrap vm-grid">
           <Reveal className="vm-block">
-            <div className="vm-figure">
-              <div className="icon">{VISION_PLACEHOLDER_ICON}</div>
-              <span>Foto menyusul</span>
-            </div>
+            <div className="vm-figure"/>
             <span className="eyebrow on-dark">Vision</span>
             <h2>Visi Perusahaan</h2>
             <p>
