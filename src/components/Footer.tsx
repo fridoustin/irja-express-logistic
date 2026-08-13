@@ -32,8 +32,7 @@ export default function Footer() {
               <b>Irja Express Logistic</b>
             </div>
             <p>
-              Mitra logistik terpercaya untuk pengiriman darat, laut, dan
-              udara ke seluruh Indonesia — berbasis di Surabaya.
+              Mitra logistik terpercaya untuk pengiriman barang ke Indonesia Timur, khususnya Papua.
             </p>
           </div>
           <div>

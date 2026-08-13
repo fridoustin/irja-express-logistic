@@ -2,11 +2,12 @@
 
 import { useEffect, useRef, useState } from "react";
 
+const FOUNDED_YEAR = 2017;
+
 const STATS = [
-  { count: 15, suffix: "+", label: "Tahun Pengalaman" },
+  { count: new Date().getFullYear() - FOUNDED_YEAR, suffix: "+", label: "Tahun Pengalaman" },
   { count: 120, suffix: "+", label: "Armada Aktif" },
   { count: 500, suffix: "+", label: "Pelanggan Puas" },
-  { count: 34, suffix: "", label: "Provinsi Terlayani" },
   { count: 50, suffix: "rb+", label: "Total Pengiriman" },
 ];
 

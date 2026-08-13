@@ -2,9 +2,6 @@ export default function Hero() {
   return (
     <section className="hero" id="home">
       <div className="hero-dots" />
-      <svg className="hero-route" preserveAspectRatio="none" viewBox="0 0 1240 800">
-        <path d="M -50 620 C 250 560, 380 700, 620 600 S 980 420, 1300 480" />
-      </svg>
       <div className="wrap">
         <div className="hero-content">
           <span className="eyebrow" style={{ color: "var(--tan-300)" }}>
@@ -14,9 +11,7 @@ export default function Hero() {
             Solusi Logistik <em>Cepat, Aman,</em> dan Terpercaya
           </h1>
           <p>
-            Kami membantu bisnis Anda mengirim barang ke seluruh Indonesia
-            dengan armada lengkap, tim profesional, dan sistem pengiriman
-            yang dapat diandalkan setiap saat.
+            Kami hadir untuk membantu menghubungkan kebutuhan pengiriman barang Anda ke berbagai wilayah Indonesia Timur, khususnya Papua.
           </p>
           <div className="hero-actions">
             <a href="/contact" className="btn btn-primary">

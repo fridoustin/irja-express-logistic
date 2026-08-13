@@ -55,8 +55,8 @@ export default function Header() {
           <Link href="/" className="brand">
             <Image src="/images/logo.png" alt="PT Irja Express Logistic" width={52} height={52} priority />
             <div className="brand-text">
-              <b>Irja Express</b>
-              <span>Logistic · Surabaya</span>
+              <b>Irja Express Logistic</b>
+              <span>Surabaya · Timika</span>
             </div>
           </Link>
           <nav>

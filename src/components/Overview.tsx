@@ -1,5 +1,7 @@
 import Reveal from "./Reveal";
 
+const FOUNDED_YEAR = 2017;
+
 export default function Overview() {
   return (
     <section className="overview" id="about">
@@ -18,25 +20,23 @@ export default function Overview() {
             />
           </svg>
           <div className="overview-badge">
-            <div className="num">15+</div>
+            <div className="num">{new Date().getFullYear() - FOUNDED_YEAR}+</div>
             <div className="lbl">Tahun Melayani Industri Logistik</div>
           </div>
         </Reveal>
 
         <Reveal className="overview-text">
           <span className="eyebrow">Tentang Perusahaan</span>
-          <h2>Mitra logistik yang tumbuh bersama bisnis Anda</h2>
+          <h2>Menghubungkan Bisnis, Menjangkau Lebih Jauh</h2>
           <p>
-            PT Irja Express Logistic adalah perusahaan jasa ekspedisi dan
-            pengiriman barang yang berbasis di Surabaya, melayani rute darat,
-            laut, dan udara ke seluruh wilayah Indonesia. Sejak awal berdiri,
-            kami berkomitmen menghadirkan layanan logistik yang efisien,
-            transparan, dan dapat diandalkan.
+            PT Irja Express Logistic adalah perusahaan jasa pengiriman barang yang berdiri sejak 2017 
+            dan berbasis di Surabaya. Kami melayani kebutuhan pengiriman barang menuju berbagai wilayah 
+            Indonesia Timur, dengan fokus utama pada tujuan Papua.
           </p>
           <p>
-            Didukung armada yang terawat dan tim operasional berpengalaman,
-            kami memastikan setiap barang sampai tepat waktu dalam kondisi
-            terbaik — mulai dari UMKM hingga perusahaan skala nasional.
+            Dengan pengalaman sejak 2017, kami terus berkomitmen untuk memberikan layanan pengiriman yang aman, 
+            tepat, dan dapat diandalkan. Kami memahami bahwa setiap pengiriman memiliki kebutuhan dan tantangan 
+            yang berbeda, terutama untuk tujuan Indonesia Timur.
           </p>
           <ul className="overview-points">
             <li>

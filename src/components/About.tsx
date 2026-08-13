@@ -198,7 +198,7 @@ export default function About() {
         </div>
       </section>
 
-      <section className="profile" style={{ paddingTop: 0 }}>
+      <section className="profile">
         <div className="wrap">
           <Reveal className="section-head">
             <span className="eyebrow">Legalitas</span>
