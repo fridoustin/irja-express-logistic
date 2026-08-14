@@ -17,8 +17,8 @@ const tiktokIcon = (
 );
 
 const SOCIALS = [
-  { label: "Instagram", username: "@irjaexpress", href: "https://instagram.com/irjaexpress", icon: instagramIcon },
-  { label: "TikTok", username: "@irjaexpress", href: "https://tiktok.com/@irjaexpress", icon: tiktokIcon },
+  { label: "Instagram", username: "@irja_expresslogistic", href: "https://instagram.com/irja_expresslogistic", icon: instagramIcon },
+  { label: "TikTok", username: "@irja_express_logistic", href: "https://www.tiktok.com/@irja_express_logistic", icon: tiktokIcon },
 ];
 
 export default function Footer() {

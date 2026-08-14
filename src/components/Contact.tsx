@@ -71,14 +71,14 @@ const CONTACT_INFO = [
   {
     title: "Jam Operasional",
     icon: clockIcon,
-    value: "Senin – Sabtu, 08.00 – 17.00 WIB",
+    value: "Senin – Jumat, 09.00 – 16.00 WIB\nSabtu, 09.00 – 14.00 WIB",
   },
   {
     title: "Media Sosial",
     icon: instagramIcon,
     links: [
-      { label: "Instagram", href: "https://instagram.com/irjaexpress", icon: instagramIcon },
-      { label: "TikTok", href: "https://tiktok.com/@irjaexpress", icon: tiktokIcon },
+      { label: "Instagram", href: "https://instagram.com/irja_expresslogistic", icon: instagramIcon },
+      { label: "TikTok", href: "https://www.tiktok.com/@irja_express_logistic", icon: tiktokIcon },
     ],
   },
 ];
@@ -119,7 +119,7 @@ export default function Contact() {
                     {item.value}
                   </a>
                 ) : (
-                  <p>{item.value}</p>
+                  <p style={{ whiteSpace: "pre-line" }}>{item.value}</p>
                 )}
               </Reveal>
             ))}
