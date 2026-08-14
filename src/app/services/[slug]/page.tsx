@@ -6,6 +6,7 @@ import Reveal from "@/components/Reveal";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { SERVICES, getService } from "@/data/services";
+import { CheckIcon } from "@/components/Icons";
 
 export function generateStaticParams() {
   return SERVICES.map((s) => ({ slug: s.slug }));
@@ -55,9 +56,7 @@ export default async function ServiceDetailPage({
             <ul className="overview-points stagger">
               {service.advantages.map((a) => (
                 <Reveal as="li" key={a}>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <path d="M20 6L9 17l-5-5" />
-                  </svg>
+                  {CheckIcon}
                   {a}
                 </Reveal>
               ))}

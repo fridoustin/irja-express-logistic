@@ -1,4 +1,5 @@
 import Reveal from "./Reveal";
+import { CheckIcon } from "./Icons";
 
 const FOUNDED_YEAR = 2017;
 
@@ -40,21 +41,15 @@ export default function Overview() {
           </p>
           <ul className="overview-points">
             <li>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <path d="M20 6L9 17l-5-5" />
-              </svg>
+              {CheckIcon}
               Legalitas &amp; izin usaha lengkap dan resmi
             </li>
             <li>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <path d="M20 6L9 17l-5-5" />
-              </svg>
+              {CheckIcon}
               Sistem pelacakan pengiriman yang transparan
             </li>
             <li>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <path d="M20 6L9 17l-5-5" />
-              </svg>
+              {CheckIcon}
               Jaringan mitra di berbagai kota besar
             </li>
           </ul>

@@ -2,6 +2,7 @@
 
 import { FormEvent, useState } from "react";
 import { Job } from "@/data/careers";
+import { ArrowRightIcon } from "./Icons";
 
 export default function CareerApplicationForm({ jobs }: { jobs: Job[] }) {
   const [sent, setSent] = useState(false);
@@ -94,9 +95,7 @@ export default function CareerApplicationForm({ jobs }: { jobs: Job[] }) {
 
       <button type="submit" className="btn btn-primary">
         Kirim Lamaran
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-          <path d="M5 12h14M13 6l6 6-6 6" />
-        </svg>
+        {ArrowRightIcon}
       </button>
 
       {sent && (

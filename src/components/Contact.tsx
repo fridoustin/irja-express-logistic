@@ -1,84 +1,44 @@
 import Reveal from "./Reveal";
 import ContactForm from "./ContactForm";
 import { BRANCHES } from "@/data/branches";
+import { ClockIcon, InstagramIcon, MailIcon, PhoneIcon, PinIcon, TikTokIcon, WhatsAppIcon } from "./Icons";
 
-const pinIcon = (
-  <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
-    <path d="M24 44s14-12.6 14-23a14 14 0 1 0-28 0c0 10.4 14 23 14 23z" />
-    <circle cx="24" cy="21" r="5" />
-  </svg>
-);
-const phoneIcon = (
-  <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
-    <path d="M15 8h5l2 8-4 3c2 6 6 10 12 12l3-4 8 2v5c0 2-2 4-4 4C22 38 10 26 10 12c0-2 2-4 5-4z" />
-  </svg>
-);
-const whatsappIcon = (
-  <svg viewBox="0 0 24 24" fill="currentColor">
-    <path d="M12 2a10 10 0 0 0-8.7 15L2 22l5.1-1.3A10 10 0 1 0 12 2zm5.6 14.2c-.2.6-1.3 1.2-1.8 1.3-.5.1-1 .1-1.7-.1-.4-.1-.9-.3-1.6-.6-2.8-1.2-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.8 0-1.3.7-2 1-2.2.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.4.2.5.7 1.8.8 1.9.1.2.1.3 0 .5-.1.2-.2.3-.3.5-.2.2-.3.3-.1.6.2.3.9 1.5 1.9 2.4 1.3 1.2 2.4 1.5 2.7 1.7.3.2.5.1.7-.1.2-.2.8-.9 1-1.2.2-.3.4-.2.7-.1.3.1 1.7.8 2 .9.3.2.5.2.6.4.1.2.1.7-.1 1.3z" />
-  </svg>
-);
-const mailIcon = (
-  <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
-    <rect x="6" y="10" width="36" height="28" rx="2" />
-    <path d="M8 12l16 14 16-14" />
-  </svg>
-);
-const clockIcon = (
-  <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
-    <circle cx="24" cy="24" r="17" />
-    <path d="M24 14v10l7 4" />
-  </svg>
-);
-const instagramIcon = (
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
-    <rect x="4" y="4" width="16" height="16" rx="4.5" />
-    <circle cx="12" cy="12" r="4" />
-    <circle cx="16.5" cy="7.5" r="0.9" fill="currentColor" stroke="none" />
-  </svg>
-);
-const tiktokIcon = (
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-    <path d="M13.5 3v11.6a3.4 3.4 0 1 1-2.9-3.4" />
-    <path d="M13.5 3c.5 2.6 2.5 4.2 4.5 4.4" />
-  </svg>
-);
 
 const CONTACT_INFO = [
   {
     title: "Alamat Kantor Pusat",
-    icon: pinIcon,
+    icon: PinIcon,
     value: "Jl. Raya Logistik No. 88, Surabaya, Jawa Timur, Indonesia",
   },
   {
     title: "Telepon",
-    icon: phoneIcon,
+    icon: PhoneIcon,
     value: "+62 31 000-0000",
     href: "tel:+62310000000",
   },
   {
     title: "WhatsApp",
-    icon: whatsappIcon,
+    icon: WhatsAppIcon,
     value: "+62 800-0000-0000",
     href: "https://wa.me/6280000000000",
   },
   {
     title: "Email",
-    icon: mailIcon,
+    icon: MailIcon,
     value: "info@irjaexpress.co.id",
     href: "mailto:info@irjaexpress.co.id",
   },
   {
     title: "Jam Operasional",
-    icon: clockIcon,
+    icon: ClockIcon,
     value: "Senin – Jumat, 09.00 – 16.00 WIB\nSabtu, 09.00 – 14.00 WIB",
   },
   {
     title: "Media Sosial",
-    icon: instagramIcon,
+    icon: InstagramIcon,
     links: [
-      { label: "Instagram", href: "https://instagram.com/irja_expresslogistic", icon: instagramIcon },
-      { label: "TikTok", href: "https://www.tiktok.com/@irja_express_logistic", icon: tiktokIcon },
+      { label: "Instagram", href: "https://instagram.com/irja_expresslogistic", icon: InstagramIcon },
+      { label: "TikTok", href: "https://www.tiktok.com/@irja_express_logistic", icon: TikTokIcon },
     ],
   },
 ];
@@ -144,7 +104,7 @@ export default function Contact() {
                     />
                   ) : (
                     <div className="branch-map-placeholder">
-                      {pinIcon}
+                      {PinIcon}
                       <span>Peta menyusul</span>
                     </div>
                   )}

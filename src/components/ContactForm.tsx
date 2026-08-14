@@ -2,6 +2,7 @@
 
 import { FormEvent, useState } from "react";
 import { SERVICES } from "@/data/services";
+import { ArrowRightIcon } from "./Icons";
 
 type Status = "idle" | "loading" | "success" | "error";
 
@@ -99,9 +100,7 @@ export default function ContactForm() {
 
       <button type="submit" className="btn btn-primary" disabled={status === "loading"}>
         {status === "loading" ? "Mengirim..." : "Kirim Pesan"}
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-          <path d="M5 12h14M13 6l6 6-6 6" />
-        </svg>
+        {ArrowRightIcon}
       </button>
 
       {status === "success" && (

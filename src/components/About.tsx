@@ -1,4 +1,5 @@
 import Reveal from "./Reveal";
+import { CheckIcon } from "./Icons";
 
 const HISTORY = [
   {
@@ -143,9 +144,7 @@ export default function About() {
             <ul className="vm-list">
               {MISSION.map((m) => (
                 <li key={m}>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <path d="M20 6L9 17l-5-5" />
-                  </svg>
+                  {CheckIcon}
                   {m}
                 </li>
               ))}

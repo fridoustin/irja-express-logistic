@@ -1,24 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
 import { BRANCHES } from "@/data/branches";
-
-const instagramIcon = (
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
-    <rect x="4" y="4" width="16" height="16" rx="4.5" />
-    <circle cx="12" cy="12" r="4" />
-    <circle cx="16.5" cy="7.5" r="0.9" fill="currentColor" stroke="none" />
-  </svg>
-);
-const tiktokIcon = (
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-    <path d="M13.5 3v11.6a3.4 3.4 0 1 1-2.9-3.4" />
-    <path d="M13.5 3c.5 2.6 2.5 4.2 4.5 4.4" />
-  </svg>
-);
+import { InstagramIcon, TikTokIcon } from "./Icons";
 
 const SOCIALS = [
-  { label: "Instagram", username: "@irja_expresslogistic", href: "https://instagram.com/irja_expresslogistic", icon: instagramIcon },
-  { label: "TikTok", username: "@irja_express_logistic", href: "https://www.tiktok.com/@irja_express_logistic", icon: tiktokIcon },
+  { label: "Instagram", username: "@irja_expresslogistic", href: "https://instagram.com/irja_expresslogistic", icon: InstagramIcon },
+  { label: "TikTok", username: "@irja_express_logistic", href: "https://www.tiktok.com/@irja_express_logistic", icon: TikTokIcon },
 ];
 
 export default function Footer() {

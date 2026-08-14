@@ -1,3 +1,5 @@
+import { ArrowRightIcon } from "./Icons";
+
 export default function Hero() {
   return (
     <section className="hero" id="home">
@@ -16,15 +18,11 @@ export default function Hero() {
           <div className="hero-actions">
             <a href="/contact" className="btn btn-primary">
               Hubungi Kami
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <path d="M5 12h14M13 6l6 6-6 6" />
-              </svg>
+              {ArrowRightIcon}
             </a>
             <a href="/services" className="btn btn-outline">
               Lihat Layanan
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <path d="M5 12h14M13 6l6 6-6 6" />
-              </svg>
+              {ArrowRightIcon}
             </a>
           </div>
         </div>

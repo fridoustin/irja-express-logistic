@@ -1,4 +1,5 @@
 import Reveal from "./Reveal";
+import { ArrowRightIcon } from "./Icons";
 
 export default function Cta() {
   return (
@@ -18,15 +19,11 @@ export default function Cta() {
             style={{ background: "#fff", color: "var(--green-800)" }}
           >
             Chat via WhatsApp
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-              <path d="M5 12h14M13 6l6 6-6 6" />
-            </svg>
+            {ArrowRightIcon}
           </a>
           <a href="/contact" className="btn btn-outline">
             Isi Formulir Kontak
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-              <path d="M5 12h14M13 6l6 6-6 6" />
-            </svg>
+            {ArrowRightIcon}
           </a>
         </Reveal>
       </div>

@@ -1,6 +1,7 @@
 import Reveal from "./Reveal";
 import CareerApplicationForm from "./CareerApplicationForm";
 import { JOBS } from "@/data/careers";
+import { ArrowRightIcon } from "./Icons";
 
 export default function Career() {
   return (
@@ -52,9 +53,7 @@ export default function Career() {
                   </div>
                   <a href="#lamar" className="btn btn-primary">
                     Lamar Posisi Ini
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                      <path d="M5 12h14M13 6l6 6-6 6" />
-                    </svg>
+                    {ArrowRightIcon}
                   </a>
                 </Reveal>
               ))}

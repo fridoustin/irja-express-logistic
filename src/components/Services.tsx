@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Reveal from "./Reveal";
 import { SERVICES } from "@/data/services";
+import { ArrowRightIcon } from "./Icons";
 
 export default function Services() {
   return (
@@ -24,9 +25,7 @@ export default function Services() {
               <p>{s.summary}</p>
               <Link href={`/services/${s.slug}`} className="service-link">
                 Selengkapnya
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <path d="M5 12h14M13 6l6 6-6 6" />
-                </svg>
+                {ArrowRightIcon}
               </Link>
             </Reveal>
           ))}
@@ -34,9 +33,7 @@ export default function Services() {
         <Reveal className="services-more">
           <Link href="/services" className="btn btn-outline">
             Lihat Semua Layanan
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-              <path d="M5 12h14M13 6l6 6-6 6" />
-            </svg>
+            {ArrowRightIcon}
           </Link>
         </Reveal>
       </div>
