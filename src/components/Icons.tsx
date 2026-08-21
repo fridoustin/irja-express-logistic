@@ -33,9 +33,9 @@ export const ArrowRightIcon = (
 );
 
 export const PinIcon = (
-  <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
-    <path d="M24 44s14-12.6 14-23a14 14 0 1 0-28 0c0 10.4 14 23 14 23z" />
-    <circle cx="24" cy="21" r="5" />
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+    <path d="M12 21s7-6.5 7-11.5a7 7 0 1 0-14 0C5 14.5 12 21 12 21Z" />
+    <circle cx="12" cy="9.5" r="2.3" />
   </svg>
 );
 export const PhoneIcon = (
@@ -53,5 +53,34 @@ export const ClockIcon = (
   <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
     <circle cx="24" cy="24" r="17" />
     <path d="M24 14v10l7 4" />
+  </svg>
+);
+export const DoorIcon = (
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+    <path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6" />
+  </svg>
+);
+export const PortIcon = (
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+    <path d="M3 21h18M5 21V10l4-2 4 2 4-2v13M9 21v-5h4v5" />
+    <path d="M13 8V4h4v4" />
+  </svg>
+);
+export const ContainerYardIcon = (
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+    <rect x="3" y="9" width="8" height="7" />
+    <rect x="13" y="9" width="8" height="7" />
+    <path d="M3 9V6h18v3" />
+  </svg>
+);
+export const PersonIcon = (
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+    <circle cx="12" cy="8" r="3.4" />
+    <path d="M5 20c1-4 4-6 7-6s6 2 7 6" />
+  </svg>
+);
+export const BulbIcon = (
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+    <path d="M9 18h6M10 22h4M12 2a6 6 0 0 0-3.5 10.9c.6.4 1 1.2 1 2.1h5c0-.9.4-1.7 1-2.1A6 6 0 0 0 12 2Z" />
   </svg>
 );

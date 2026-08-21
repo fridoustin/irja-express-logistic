@@ -36,10 +36,10 @@ export default function Footer() {
           <div>
             <h4>Layanan</h4>
             <ul>
-              <li><Link href="/services/trucking">Pengiriman Darat</Link></li>
-              <li><Link href="/services/sea-freight">Ekspedisi Laut</Link></li>
-              <li><Link href="/services/air-freight">Ekspedisi Udara</Link></li>
-              <li><Link href="/services/warehousing">Pergudangan</Link></li>
+              <li><Link href="/services/sea-freight-fcl">Sea Freight (FCL)</Link></li>
+              <li><Link href="/services/land-freight">Land Freight</Link></li>
+              <li><Link href="/services/container-transportation">Container Transportation</Link></li>
+              <li><Link href="/services/flat-rack">Flat Rack</Link></li>
             </ul>
           </div>
           <div>

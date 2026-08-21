@@ -3,6 +3,7 @@ import Cta from "@/components/Cta";
 import Footer from "@/components/Footer";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
 import Reveal from "@/components/Reveal";
+import SchemeSection from "@/components/Schemesection";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { SERVICES, getService } from "@/data/services";
@@ -32,7 +33,7 @@ export default async function ServiceDetailPage({
           </div>
         </section>
 
-        <section className="profile">
+        <section className="profile" style={{ paddingBottom: 24 }}>
           <div className="wrap">
             <Reveal className="section-head" style={{ maxWidth: 720 }}>
               <span className="eyebrow">Deskripsi Layanan</span>
@@ -46,6 +47,8 @@ export default async function ServiceDetailPage({
             </Reveal>
           </div>
         </section>
+
+        {service.schemes && <SchemeSection schemes={service.schemes} />}
 
         <section className="why">
           <div className="wrap">
@@ -64,25 +67,44 @@ export default async function ServiceDetailPage({
           </div>
         </section>
 
-        <section className="profile">
-          <div className="wrap">
-            <Reveal className="section-head" style={{ maxWidth: 720 }}>
-              <span className="eyebrow">Area Layanan</span>
-              <h2>Cakupan Wilayah</h2>
-              <p>{service.serviceArea}</p>
-            </Reveal>
-
-            <Reveal className="section-head" style={{ maxWidth: 720, marginTop: 8 }}>
-              <span className="eyebrow">Jenis Armada</span>
-              <h2>Armada yang Digunakan</h2>
-            </Reveal>
-            <div className="fleet-chips">
-              {service.fleetTypes.map((f) => (
-                <span key={f} className="chip">{f}</span>
-              ))}
+        {(service.serviceArea || (service.fleetTypes && service.fleetTypes.length > 0)) && (
+          <section className="profile">
+            <div className="wrap">
+              {service.serviceArea && (
+                <Reveal className="section-head" style={{ maxWidth: 720 }}>
+                  <span className="eyebrow">Area Layanan</span>
+                  <h2>Cakupan Wilayah</h2>
+                  <p>{service.serviceArea}</p>
+                </Reveal>
+              )}
+              {service.fleetTypes && service.fleetTypes.length > 0 && (
+                <>
+                  <Reveal className="section-head" style={{ maxWidth: 720, marginTop: 8 }}>
+                    <span className="eyebrow">Jenis Armada</span>
+                    <h2>Armada yang Digunakan</h2>
+                  </Reveal>
+                  <div className="fleet-chips">
+                    {service.fleetTypes.map((f) => (
+                      <span key={f} className="chip">{f}</span>
+                    ))}
+                  </div>
+                </>
+              )}
             </div>
-          </div>
-        </section>
+          </section>
+        )}
+
+        {service.note && (
+          <section className="profile">
+            <div className="wrap">
+              <Reveal className="section-head" style={{ maxWidth: 720 }}>
+                <span className="eyebrow">{service.note.eyebrow}</span>
+                <h2>{service.note.heading}</h2>
+                <p>{service.note.body}</p>
+              </Reveal>
+            </div>
+          </section>
+        )}
 
         <section className="why">
           <div className="wrap">

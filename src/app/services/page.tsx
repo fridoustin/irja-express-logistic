@@ -4,7 +4,7 @@ import Footer from "@/components/Footer";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
 import Reveal from "@/components/Reveal";
 import Link from "next/link";
-import { SERVICES } from "@/data/services";
+import { SERVICES, CARGO_CATEGORIES, CARGO_CATEGORIES_INTRO, CARGO_CATEGORIES_NOTE } from "@/data/services";
 import { ArrowRightIcon } from "@/components/Icons";
 
 export default function ServicesPage() {
@@ -39,6 +39,26 @@ export default function ServicesPage() {
                 </Reveal>
               ))}
             </div>
+          </div>
+        </section>
+
+        <section className="why">
+          <div className="wrap">
+            <Reveal className="section-head">
+              <span className="eyebrow">Kategori Barang Kiriman</span>
+              <h2>Barang yang Kami Layani</h2>
+              <p>{CARGO_CATEGORIES_INTRO}</p>
+            </Reveal>
+            <div className="cargo-grid stagger">
+              {CARGO_CATEGORIES.map((cat, i) => (
+                <Reveal key={cat.title} className="cargo-card">
+                  <span className="idx">{String(i + 1).padStart(2, "0")}</span>
+                  <h3>{cat.title}</h3>
+                  <p>{cat.desc}</p>
+                </Reveal>
+              ))}
+            </div>
+            <p className="cargo-note">{CARGO_CATEGORIES_NOTE}</p>
           </div>
         </section>
 
