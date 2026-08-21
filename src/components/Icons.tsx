@@ -90,3 +90,40 @@ export const STAR_ICON = (
     <path d="M12 2.5l2.9 6.2 6.8.7-5.1 4.6 1.5 6.7L12 17.3l-6.1 3.4 1.5-6.7-5.1-4.6 6.8-.7z" />
   </svg>
 );
+
+export const NAV_ICON = {
+  "/": DoorIcon,
+  "/about": (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+      <rect x="4" y="3" width="16" height="18" />
+      <path d="M8 7h2M14 7h2M8 11h2M14 11h2M8 15h2M14 15h2" />
+    </svg>
+  ),
+  "/services": (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+      <rect x="1.5" y="9" width="12" height="7" />
+      <path d="M13.5 11h5l3 3v2h-8z" />
+      <circle cx="6.5" cy="18" r="1.7" />
+      <circle cx="17.5" cy="18" r="1.7" />
+    </svg>
+  ),
+  "/gallery": (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+      <rect x="3" y="4" width="18" height="16" rx="1.5" />
+      <circle cx="8.5" cy="9.5" r="1.5" />
+      <path d="M21 16l-5.5-5.5L4 21" />
+    </svg>
+  ),
+  "/career": (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+      <rect x="3" y="7" width="18" height="13" rx="1.5" />
+      <path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M3 12h18" />
+    </svg>
+  ),
+  "/contact": (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+      <rect x="3" y="5" width="18" height="14" rx="1.5" />
+      <path d="M3 7l9 6 9-6" />
+    </svg>
+  ),
+} as const;
