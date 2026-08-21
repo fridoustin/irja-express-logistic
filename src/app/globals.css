@@ -808,7 +808,6 @@ footer {
   grid-template-columns: 1.3fr 0.8fr 0.8fr 1fr 1.3fr;
   gap: 40px;
   padding-bottom: 56px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 .foot-brand {
   display: flex;
@@ -914,6 +913,114 @@ footer ul a:hover {
   font-size: 13px;
   flex-wrap: wrap;
   gap: 12px;
+}
+
+/* ===== FOOTER MARITIME VISUAL ===== */
+.foot-maritime {
+  position: relative;
+  height: 160px;
+  overflow: hidden;
+  margin-top: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+/* Area langit */
+.foot-maritime-sky {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+/* Awan */
+.foot-cloud {
+  position: absolute;
+  width: 90px;
+  height: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 50%;
+  opacity: 0.7;
+}
+.foot-cloud::before,
+.foot-cloud::after {
+  content: "";
+  position: absolute;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-bottom: 0;
+  border-radius: 50% 50% 0 0;
+}
+.foot-cloud::before {
+  width: 35px;
+  height: 25px;
+  left: 18px;
+  bottom: 5px;
+}
+.foot-cloud::after {
+  width: 25px;
+  height: 18px;
+  left: 45px;
+  bottom: 5px;
+}
+.cloud-1 {
+  top: 35px;
+  left: 15%;
+}
+.cloud-2 {
+  top: 60px;
+  right: 18%;
+}
+
+/* ===== LAUT ===== */
+.foot-sea {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 40px;
+  overflow: hidden;
+  z-index: 1;
+}
+.wave {
+  position: absolute;
+  left: -10%;
+  width: 120%;
+  height: 20px;
+  border-top: 1px dashed rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+}
+.wave-1 {
+  bottom: 12px;
+  animation: waveMove 6s ease-in-out infinite;
+}
+.wave-2 {
+  bottom: 4px;
+  opacity: 0.5;
+  animation: waveMove 8s ease-in-out infinite reverse;
+}
+
+/* ===== KAPAL ===== */
+.foot-ship {
+  position: absolute;
+  left: -450px;
+  bottom: 2px; /* Menempel tepat di atas garis bawah */
+  width: 380px; /* Ukuran proporsional sesuai target */
+  z-index: 2;
+  pointer-events: none;
+  animation: cargoShipMove 28s linear infinite;
+}
+
+.foot-ship img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* ===== ANIMASI KAPAL ===== */
+@keyframes cargoShipMove {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(100vw + 500px));
+  }
 }
 
 /* ===== WHATSAPP FLOAT ===== */

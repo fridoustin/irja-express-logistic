@@ -67,6 +67,27 @@ export default function Footer() {
             </div>
           </div>
         </div>
+        {/* ===== MARITIME ANIMATION ===== */}
+        <div className="foot-maritime" aria-hidden="true">
+          <div className="foot-maritime-sky">
+            <span className="foot-cloud cloud-1" />
+            <span className="foot-cloud cloud-2" />
+          </div>
+          <div className="foot-sea">
+            <span className="wave wave-1" />
+            <span className="wave wave-2" />
+            <span className="wave wave-3" />
+          </div>
+          <div className="foot-ship">
+            <Image
+              src="/images/cargo-ship.png"
+              alt=""
+              width={900}
+              height={360}
+              priority
+            />
+          </div>
+        </div>
         <div className="foot-bottom">
           <span>© 2026 PT Irja Express Logistic. Seluruh hak cipta dilindungi.</span>
           <span className="mono" style={{ letterSpacing: "0.06em" }}>
