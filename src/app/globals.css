@@ -724,7 +724,7 @@ section {
   color: var(--charcoal-60);
 }
 
-/* ===== TESTIMONIALS ===== */
+/* ===== CUSTOMER SATISFACTION ===== */
 .testi {
   background: var(--cream);
 }
@@ -734,70 +734,25 @@ section {
   text-align: center;
   position: relative;
 }
-.testi-quote {
-  width: 40px;
-  height: 40px;
-  margin: 0 auto 30px;
-  color: var(--tan-300);
-}
-.testi-slide {
-  display: none;
-}
-.testi-slide.active {
-  display: block;
-  animation: fadeSlide 0.7s var(--ease);
-}
-@keyframes fadeSlide {
-  from {
-    opacity: 0;
-    transform: translateY(14px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-.testi-slide p {
-  font-family: var(--font-display), sans-serif;
-  font-weight: 600;
-  font-size: clamp(22px, 3vw, 30px);
-  line-height: 1.45;
-  color: var(--green-900);
-}
-.testi-who {
-  margin-top: 28px;
-}
-.testi-who b {
-  font-size: 15.5px;
-  display: block;
-  color: var(--charcoal);
-}
-.testi-who span {
-  font-family: var(--font-mono), monospace;
-  font-size: 12px;
-  color: var(--charcoal-60);
-}
-.testi-dots {
+.testi-stars {
   display: flex;
   justify-content: center;
-  gap: 10px;
-  margin-top: 40px;
+  gap: 8px;
+  margin: 8px 0 24px;
 }
-.testi-dots button {
-  width: 9px;
-  height: 9px;
-  border-radius: 50%;
-  border: none;
-  background: var(--tan-300);
-  cursor: pointer;
-  padding: 0;
-  transition:
-    background 0.3s,
-    transform 0.3s;
+.testi-stars svg {
+  width: 30px;
+  height: 30px;
+  color: var(--tan-300);
 }
-.testi-dots button.active {
-  background: var(--green-700);
-  transform: scale(1.3);
+.testi-satisfaction-text {
+  font-family: var(--font-display), sans-serif;
+  font-weight: 600;
+  font-size: clamp(20px, 2.6vw, 26px);
+  line-height: 1.5;
+  color: var(--green-900);
+  text-transform: none;
+  letter-spacing: 0;
 }
 
 /* ===== CTA ===== */

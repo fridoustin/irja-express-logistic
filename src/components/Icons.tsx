@@ -84,3 +84,9 @@ export const BulbIcon = (
     <path d="M9 18h6M10 22h4M12 2a6 6 0 0 0-3.5 10.9c.6.4 1 1.2 1 2.1h5c0-.9.4-1.7 1-2.1A6 6 0 0 0 12 2Z" />
   </svg>
 );
+
+export const STAR_ICON = (
+  <svg viewBox="0 0 24 24" fill="currentColor">
+    <path d="M12 2.5l2.9 6.2 6.8.7-5.1 4.6 1.5 6.7L12 17.3l-6.1 3.4 1.5-6.7-5.1-4.6 6.8-.7z" />
+  </svg>
+);

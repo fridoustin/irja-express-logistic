@@ -4,7 +4,7 @@ import Overview from "@/components/Overview";
 import WhyChooseUs from "@/components/WhyChooseUs";
 import Services from "@/components/Services";
 import Stats from "@/components/Stats";
-import Testimonials from "@/components/Testimonials";
+import CustomerSatisfaction from "@/components/CustomerSatisfaction";
 import Cta from "@/components/Cta";
 import Footer from "@/components/Footer";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
@@ -19,7 +19,7 @@ export default function Home() {
         <WhyChooseUs />
         <Services />
         <Stats />
-        <Testimonials />
+        <CustomerSatisfaction />
         <Cta />
       </main>
       <Footer />
