@@ -8,6 +8,7 @@ import CustomerSatisfaction from "@/components/CustomerSatisfaction";
 import Cta from "@/components/Cta";
 import Footer from "@/components/Footer";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
+import Testimonials from "@/components/Testimonial";
 
 export default function Home() {
   return (
@@ -19,7 +20,7 @@ export default function Home() {
         <WhyChooseUs />
         <Services />
         <Stats />
-        <CustomerSatisfaction />
+        <Testimonials />
         <Cta />
       </main>
       <Footer />
