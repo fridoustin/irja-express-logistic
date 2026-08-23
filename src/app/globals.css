@@ -669,44 +669,47 @@ section {
   position: relative;
   overflow: hidden;
 }
-.stats-route {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  transform: translateY(-50%);
-  z-index: 0;
-}
-.stats-route svg {
-  width: 100%;
-  height: 60px;
-  display: block;
-}
-.stats-route path {
-  fill: none;
-  stroke: var(--green-600);
-  stroke-width: 1.6;
-  stroke-dasharray: 2 10;
-  stroke-linecap: round;
-}
 .stats-grid {
   position: relative;
-  z-index: 1;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
 }
+.stats-grid::before {
+  content: "";
+  position: absolute;
+  top: 26px;
+  left: 12.5%;
+  right: 12.5%;
+  height: 0;
+  border-top: 2px dashed var(--green-600);
+  z-index: 0;
+  opacity: 0.5;
+}
 .stat {
+  position: relative;
+  z-index: 1;
   text-align: center;
 }
-.stat .stop {
-  width: 12px;
-  height: 12px;
+.stat-badge-row {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 22px;
+}
+.stat-badge {
+  width: 52px;
+  height: 52px;
   border-radius: 50%;
   background: var(--green-700);
-  margin: 0 auto 20px;
-  box-shadow: 0 0 0 6px rgba(47, 82, 51, 0.14);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 0 4px var(--tan-200), 0 0 0 5px var(--tan-300), var(--shadow);
+}
+.stat-badge svg {
+  width: 22px;
+  height: 22px;
 }
 .stat .num {
   font-family: var(--font-display), sans-serif;
@@ -726,12 +729,16 @@ section {
   color: var(--green-700);
 }
 .stat .lbl {
-  margin-top: 10px;
+  display: inline-block;
+  margin-top: 16px;
+  background: none;
+  color: var(--green-700);
   font-family: var(--font-mono), monospace;
-  font-size: 11.5px;
+  font-size: 11px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--charcoal-60);
+  padding: 0;
+  border-radius: 0;
 }
 
 /* ===== TESTIMONIALS ===== */
@@ -1257,8 +1264,11 @@ footer ul a:hover {
     grid-template-columns: repeat(2, 1fr);
   }
   .stats-grid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     row-gap: 44px;
+  }
+  .stats-grid::before {
+    display: none;
   }
   .foot-grid {
     grid-template-columns: 1fr 1fr;
