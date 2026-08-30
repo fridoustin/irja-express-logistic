@@ -70,7 +70,7 @@ export default function Footer() {
         <div className="foot-bottom">
           <span>© 2026 PT Irja Express Logistic. Seluruh hak cipta dilindungi.</span>
           <span className="mono" style={{ letterSpacing: "0.06em" }}>
-            SURABAYA · INDONESIA
+            SURABAYA · TIMIKA · INDONESIA
           </span>
         </div>
       </div>
