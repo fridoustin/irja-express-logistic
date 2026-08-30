@@ -752,11 +752,18 @@ section {
   margin: 0 auto 30px;
   color: var(--tan-300);
 }
+.testi-track {
+  display: grid;
+}
 .testi-slide {
-  display: none;
+  grid-area: 1 / 1;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.7s var(--ease);
 }
 .testi-slide.active {
-  display: block;
+  opacity: 1;
+  pointer-events: auto;
   animation: fadeSlide 0.7s var(--ease);
 }
 @keyframes fadeSlide {

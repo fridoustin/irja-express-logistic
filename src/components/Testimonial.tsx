@@ -5,21 +5,18 @@ import { useEffect, useState } from "react";
 const TESTIMONIALS = [
 {
     quote:
-    "Irja Express jadi mitra logistik utama toko kami. Barang selalu sampai tepat waktu dan tim support-nya sangat mudah dihubungi.",
-    name: "Hendra Wijaya",
-    role: "Pemilik — Toko Makmur Jaya, Surabaya",
+    "Biasa kirim buat area timur, pelayanan memuaskan pengiriman tepat waktu kalau ada kendala pasti di info 👍🏻👍🏻",
+    name: "Ananda Sari",
 },
 {
     quote:
-    "Proses pengiriman ke luar pulau jadi jauh lebih mudah. Harga bersaing dan armadanya benar-benar terawat.",
-    name: "Siti Rahmawati",
-    role: "Manajer Operasional — PT Sinar Abadi",
+    "Pengirimannya sangat efektif dan terpercaya, harga terjangkau dan admin yg sangat ramah, dan selalu melayani pertanyaan pelanggan dengan sabar. ",
+    name: "Cindy Isma",
 },
 {
     quote:
-    "Yang paling saya suka adalah transparansi status pengiriman. Kami selalu tahu posisi barang tanpa perlu bertanya berkali-kali.",
-    name: "Budi Santoso",
-    role: "Founder — Kopi Nusantara Group",
+    "Pelayanan bagus, response admin cepat bahkan saat dibutuhkan di luar jam kerja",
+    name: "Kelly Karyanto",
 },
 ];
 
@@ -48,11 +45,10 @@ return (
         </svg>
         <div className="testi-track">
             {TESTIMONIALS.map((t, i) => (
-            <div className={`testi-slide ${i === active ? "active" : ""}`} key={t.name}>
+            <div className={`testi-slide ${i === active ? "active" : ""}`} key={t.name} aria-hidden={i !== active}>
                 <p>&ldquo;{t.quote}&rdquo;</p>
                 <div className="testi-who">
                 <b>{t.name}</b>
-                <span>{t.role}</span>
                 </div>
             </div>
             ))}
