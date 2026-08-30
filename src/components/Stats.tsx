@@ -11,14 +11,6 @@ const CALENDAR_ICON = (
     <path d="M12 13.3l1 2 2.2.3-1.6 1.5.4 2.2-2-1-2 1 .4-2.2-1.6-1.5 2.2-.3z" fill="currentColor" stroke="none" />
   </svg>
 );
-const TRUCK_ICON = (
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-    <rect x="1.5" y="8" width="12" height="8" />
-    <path d="M13.5 10h5l3 3v3h-8z" />
-    <circle cx="6.5" cy="18.5" r="1.8" />
-    <circle cx="17.5" cy="18.5" r="1.8" />
-  </svg>
-);
 const STAR_BADGE_ICON = (
   <svg viewBox="0 0 24 24" fill="currentColor">
     <path d="M12 3l2.5 5.4 5.9.6-4.4 4 1.3 5.8L12 15.9l-5.3 2.9 1.3-5.8-4.4-4 5.9-.6z" />
@@ -38,9 +30,8 @@ type Stat = { label: string; icon: React.ReactNode } & (
 
 const STATS: Stat[] = [
   { count: new Date().getFullYear() - FOUNDED_YEAR, suffix: "+", label: "Tahun Pengalaman", icon: CALENDAR_ICON },
-  { count: 120, suffix: "+", label: "Armada Aktif", icon: TRUCK_ICON },
-  { stars: true, label: "Bintang 5", icon: STAR_BADGE_ICON },
-  { count: 50, suffix: "rb+", label: "Total Pengiriman", icon: BOX_ICON },
+  { stars: true, label: "Kepuasan Pelanggan", icon: STAR_BADGE_ICON },
+  { count: 120, suffix: "rb+", label: "Total Pengiriman", icon: BOX_ICON },
 ];
 
 const STAR_ICON = (

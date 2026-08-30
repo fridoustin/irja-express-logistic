@@ -672,15 +672,15 @@ section {
 .stats-grid {
   position: relative;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
 }
 .stats-grid::before {
   content: "";
   position: absolute;
   top: 26px;
-  left: 12.5%;
-  right: 12.5%;
+  left: 16.6667%;
+  right: 16.6667%;
   height: 0;
   border-top: 2px dashed var(--green-600);
   z-index: 0;
@@ -720,13 +720,17 @@ section {
 }
 .stat-stars {
   display: flex;
+  flex-wrap: wrap;
+  max-width: 100px;
+  margin: 0 auto;
   justify-content: center;
-  gap: 4px;
+  gap: 6px;
 }
 .stat-stars svg {
   width: 26px;
   height: 26px;
   color: var(--green-700);
+  display: block;
 }
 .stat .lbl {
   display: inline-block;
