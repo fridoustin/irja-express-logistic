@@ -8,18 +8,6 @@ export default function Overview() {
     <section className="overview" id="about">
       <div className="wrap">
         <Reveal className="overview-visual">
-          <svg viewBox="0 0 400 420" xmlns="http://www.w3.org/2000/svg">
-            <circle className="glob-ring" cx="200" cy="180" r="130" />
-            <circle className="glob-ring" cx="200" cy="180" r="95" opacity=".6" />
-            <circle cx="200" cy="180" r="4" fill="#d8c3a0" />
-            <path
-              d="M60 300 C 140 340, 260 280, 350 330"
-              fill="none"
-              stroke="rgba(216,195,160,.5)"
-              strokeWidth="1.4"
-              strokeDasharray="4 8"
-            />
-          </svg>
           <div className="overview-badge">
             <div className="num">{new Date().getFullYear() - FOUNDED_YEAR}+</div>
             <div className="lbl">Tahun Melayani Industri Logistik</div>
