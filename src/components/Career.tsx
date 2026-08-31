@@ -6,7 +6,7 @@ import { ArrowRightIcon } from "./Icons";
 export default function Career() {
   return (
     <>
-      <section className="page-banner">
+      <section className="page-banner page-banner-career">
         <div className="wrap">
           <span className="eyebrow on-dark">Career</span>
           <h1>Karier di PT Irja Express Logistic</h1>

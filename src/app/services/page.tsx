@@ -12,7 +12,7 @@ export default function ServicesPage() {
     <>
       <Header />
       <main>
-        <section className="page-banner">
+        <section className="page-banner page-banner-services">
           <div className="wrap">
             <span className="eyebrow on-dark">Services</span>
             <h1>Layanan Logistik Kami</h1>

@@ -1355,6 +1355,36 @@ footer ul a:hover {
   padding: 190px 0 70px;
   color: #fff;
 }
+.page-banner-about {
+  background:
+    rgba(57, 114, 70, 0.8)
+    url("/images/header-aboutus.png") center / cover no-repeat;
+  background-blend-mode: multiply;
+}
+.page-banner-services {
+  background:
+    rgba(57, 114, 70, 0.8)
+    url("/images/header-services.png") center / cover no-repeat;
+  background-blend-mode: multiply;
+}
+.page-banner-gallery {
+  background:
+    rgba(57, 114, 70, 0.8)
+    url("/images/header-gallery.png") center / cover no-repeat;
+  background-blend-mode: multiply;
+}
+.page-banner-career {
+  background:
+    rgba(57, 114, 70, 0.8)
+    url("/images/header-career.png") center / cover no-repeat;
+  background-blend-mode: multiply;
+}
+.page-banner-contact {
+  background:
+    rgba(57, 114, 70, 0.8)
+    url("/images/header-contact.png") center / cover no-repeat;
+  background-blend-mode: multiply;
+}
 .page-banner h1 {
   font-family: var(--font-display), sans-serif;
   font-weight: 800;
@@ -1365,8 +1395,12 @@ footer ul a:hover {
 .eyebrow.on-dark::before {
   color: var(--tan-300);
 }
+.eyebrow.on-dark {
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
+}
 .eyebrow.on-dark::before {
   background: var(--tan-300);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
 }
 
 /* ===== ABOUT: PROFILE / LICENSE GRIDS ===== */

@@ -9,7 +9,7 @@ export default function GalleryPage() {
     <>
       <Header />
       <main>
-        <section className="page-banner">
+        <section className="page-banner page-banner-gallery">
           <div className="wrap">
             <span className="eyebrow on-dark">Gallery</span>
             <h1>Dokumentasi Kegiatan Perusahaan</h1>

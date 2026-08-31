@@ -13,20 +13,20 @@ const CONTACT_INFO = [
   {
     title: "Telepon",
     icon: PhoneIcon,
-    value: "+62 31 000-0000",
-    href: "tel:+62310000000",
+    value: "+62 813 5958 5989",
+    href: "tel:+6281359585989",
   },
   {
     title: "WhatsApp",
     icon: WhatsAppIcon,
-    value: "+62 800-0000-0000",
-    href: "https://wa.me/6280000000000",
+    value: "+62 813 5958 5989",
+    href: "https://wa.me/6281359585989",
   },
   {
     title: "Email",
     icon: MailIcon,
-    value: "info@irjaexpress.co.id",
-    href: "mailto:info@irjaexpress.co.id",
+    value: "irjaexpresslogistic17@gmail.com",
+    href: "mailto:irjaexpresslogistic17@gmail.com",
   },
   {
     title: "Jam Operasional",
@@ -46,7 +46,7 @@ const CONTACT_INFO = [
 export default function Contact() {
   return (
     <>
-      <section className="page-banner">
+      <section className="page-banner page-banner-contact">
         <div className="wrap">
           <span className="eyebrow on-dark">Contact</span>
           <h1>Hubungi PT Irja Express Logistic</h1>

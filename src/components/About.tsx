@@ -5,7 +5,7 @@ import { HISTORY, MISSION, VALUES } from "@/data/about";
 export default function About() {
   return (
     <>
-      <section className="page-banner">
+      <section className="page-banner page-banner-about">
         <div className="wrap">
           <span className="eyebrow on-dark">About Us</span>
           <h1>Tentang PT Irja Express Logistic</h1>
