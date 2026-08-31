@@ -12,7 +12,7 @@ export default function Cta() {
         </Reveal>
         <Reveal className="cta-actions">
           <a
-            href="https://wa.me/6280000000000"
+            href="https://wa.me/6281359585989"
             target="_blank"
             rel="noopener noreferrer"
             className="btn btn-primary"
