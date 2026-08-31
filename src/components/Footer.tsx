@@ -44,8 +44,8 @@ export default function Footer() {
           </div>
           <div>
             <h4>Kontak</h4>
-            <p style={{ marginBottom: 10 }}>+62 800-0000-0000</p>
-            <p style={{ marginBottom: 20 }}>info@irjaexpress.co.id</p>
+            <p style={{ marginBottom: 10 }}>+62 813 5958 5989</p>
+            <p style={{ marginBottom: 20 }}>irjaexpresslogistic17@gmail.com</p>
             <div className="foot-contact-social">
               {SOCIALS.map((s) => (
                 <a key={s.label} href={s.href} target="_blank" rel="noopener noreferrer">
