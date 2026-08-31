@@ -1,4 +1,4 @@
-import { STAR_ICON } from "./Icons";
+import { StarIcon } from "./Icons";
 
 
 export default function CustomerSatisfaction() {
@@ -14,7 +14,7 @@ export default function CustomerSatisfaction() {
         <div className="testi-wrap">
           <div className="testi-stars">
             {Array.from({ length: 5 }).map((_, i) => (
-              <span key={i}>{STAR_ICON}</span>
+              <span key={i}>{StarIcon}</span>
             ))}
           </div>
           <p className="testi-satisfaction-text">
