@@ -69,7 +69,7 @@ export default function About() {
         </div>
       </section>
 
-      <section className="why">
+      <section className="why why-values">
         <div className="wrap">
           <Reveal className="section-head">
             <span className="eyebrow">Company Values</span>
