@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { DoorIcon, InstagramIcon, NAV_ICON, TikTokIcon, WhatsAppIcon } from "./Icons";
+import { WHATSAPP_URL } from "@/lib/whatsapp";
 
 const NAV_ITEMS = [
   { href: "/", label: "Home" },
@@ -125,7 +126,12 @@ export default function Header() {
         </div>
 
         <div className="mobile-nav-foot">
-          <a href="https://wa.me/6280000000000" target="_blank" rel="noopener noreferrer" className="btn btn-primary">
+          <a
+            href={WHATSAPP_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn btn-primary"
+          >
             {WhatsAppIcon}
             Chat WhatsApp
           </a>

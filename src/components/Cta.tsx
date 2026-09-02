@@ -1,5 +1,6 @@
 import Reveal from "./Reveal";
 import { ArrowRightIcon } from "./Icons";
+import { WHATSAPP_URL } from "@/lib/whatsapp";
 
 export default function Cta() {
   return (
@@ -12,7 +13,7 @@ export default function Cta() {
         </Reveal>
         <Reveal className="cta-actions">
           <a
-            href="https://wa.me/6281359585989"
+            href={WHATSAPP_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="btn btn-primary"

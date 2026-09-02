@@ -2,6 +2,7 @@ import Reveal from "./Reveal";
 import ContactForm from "./ContactForm";
 import { BRANCHES } from "@/data/branches";
 import { ClockIcon, InstagramIcon, MailIcon, PhoneIcon, PinIcon, TikTokIcon, WhatsAppIcon } from "./Icons";
+import { WHATSAPP_URL } from "@/lib/whatsapp";
 
 
 const CONTACT_INFO = [
@@ -20,7 +21,7 @@ const CONTACT_INFO = [
     title: "WhatsApp",
     icon: WhatsAppIcon,
     value: "+62 813 5958 5989",
-    href: "https://wa.me/6281359585989",
+    href: WHATSAPP_URL,
   },
   {
     title: "Email",
