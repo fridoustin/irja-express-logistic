@@ -37,9 +37,12 @@ export default function Footer() {
             <h4>Layanan</h4>
             <ul>
               <li><Link href="/services/sea-freight-fcl">Sea Freight (FCL)</Link></li>
+              <li><Link href="/services/sea-freight-lcl">Sea Freight (LCL)</Link></li>
               <li><Link href="/services/land-freight">Land Freight</Link></li>
-              <li><Link href="/services/container-transportation">Container Transportation</Link></li>
               <li><Link href="/services/flat-rack">Flat Rack</Link></li>
+              <li><Link href="/services/container-transportation">Container Transportation</Link></li>
+              <li><Link href="/services/pickup-delivery">Pickup & Delivery</Link></li>
+              <li><Link href="/services/insurance">Insurance</Link></li>
             </ul>
           </div>
           <div>
@@ -70,7 +73,7 @@ export default function Footer() {
         <div className="foot-bottom">
           <span>© 2026 PT Irja Express Logistic. Seluruh hak cipta dilindungi.</span>
           <span className="mono" style={{ letterSpacing: "0.06em" }}>
-            SURABAYA · TIMIKA · INDONESIA
+            SURABAYA · PAPUA · INDONESIA
           </span>
         </div>
       </div>
