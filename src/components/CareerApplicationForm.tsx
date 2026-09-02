@@ -1,11 +1,14 @@
 "use client";
 
-import { FormEvent, useState } from "react";
+import { FormEvent, useRef, useState } from "react";
 import { Job } from "@/data/careers";
 import { ArrowRightIcon } from "./Icons";
+import { UseFormDraft } from "@/hooks/UseFormDraft";
 
 export default function CareerApplicationForm({ jobs }: { jobs: Job[] }) {
   const [sent, setSent] = useState(false);
+  const formRef = useRef<HTMLFormElement>(null);
+  const { clearDraft } = UseFormDraft("career", formRef);
 
   async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -26,8 +29,8 @@ export default function CareerApplicationForm({ jobs }: { jobs: Job[] }) {
       }
 
       setSent(true);
-
       form.reset();
+      clearDraft();
     } catch (error) {
       console.error("Submit error:", error);
 
@@ -40,7 +43,7 @@ export default function CareerApplicationForm({ jobs }: { jobs: Job[] }) {
   }
 
   return (
-    <form className="career-form" onSubmit={handleSubmit}>
+    <form ref={formRef} className="career-form" onSubmit={handleSubmit}>
       <div className="form-row">
         <div className="field">
           <label htmlFor="name">Nama Lengkap *</label>

@@ -1,14 +1,17 @@
 "use client";
 
-import { FormEvent, useState } from "react";
+import { FormEvent, useRef, useState } from "react";
 import { SERVICES } from "@/data/services";
 import { ArrowRightIcon } from "./Icons";
+import { UseFormDraft } from "@/hooks/UseFormDraft";
 
 type Status = "idle" | "loading" | "success" | "error";
 
 export default function ContactForm() {
   const [status, setStatus] = useState<Status>("idle");
   const [errorMsg, setErrorMsg] = useState("");
+  const formRef = useRef<HTMLFormElement>(null);
+  const { clearDraft } = UseFormDraft("contact", formRef);
 
   async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -42,6 +45,7 @@ export default function ContactForm() {
 
       setStatus("success");
       form.reset();
+      clearDraft();
     } catch {
       setStatus("error");
       setErrorMsg("Tidak dapat terhubung ke server. Periksa koneksi internet Anda.");
@@ -49,7 +53,7 @@ export default function ContactForm() {
   }
 
   return (
-    <form className="career-form contact-form" onSubmit={handleSubmit}>
+    <form ref={formRef} className="career-form contact-form" onSubmit={handleSubmit}>
       <div className="form-row">
         <div className="field">
           <label htmlFor="name">Nama *</label>
