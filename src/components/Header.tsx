@@ -57,7 +57,7 @@ export default function Header() {
             <Image src="/images/logo.png" alt="PT Irja Express Logistic" width={52} height={52} priority />
             <div className="brand-text">
               <b>Irja Express Logistic</b>
-              <span>Surabaya · Timika</span>
+              <span>Surabaya · Papua · Indonesia</span>
             </div>
           </Link>
           <nav>
