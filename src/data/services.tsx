@@ -1,3 +1,4 @@
+import { BoxesIcon, ContainerIcon, ForkliftIcon, MapPinnedIcon, PackageOpenIcon, ShieldCheckIcon, TruckIcon } from "@/components/Icons";
 import { ReactNode } from "react";
 
 export type Service = {
@@ -22,61 +23,6 @@ export type Service = {
   workProcess: { title: string; desc: string }[];
   icon: ReactNode;
 };
-
-const containerIcon = (
-  <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="2">
-    <rect x="5" y="14" width="38" height="20" />
-    <path d="M5 22h38M14 14v20M23 14v20M32 14v20" />
-  </svg>
-);
-const boxesIcon = (
-  <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="2">
-    <rect x="5" y="24" width="16" height="16" />
-    <rect x="27" y="24" width="16" height="16" />
-    <rect x="16" y="6" width="16" height="16" />
-  </svg>
-);
-const truckIcon = (
-  <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="2">
-    <rect x="3" y="18" width="24" height="14" />
-    <path d="M27 22h10l6 6v4H27z" />
-    <circle cx="13" cy="36" r="3.2" />
-    <circle cx="35" cy="36" r="3.2" />
-  </svg>
-);
-const flatRackIcon = (
-  <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="2">
-    <path d="M3 30h34" />
-    <rect x="10" y="14" width="20" height="16" strokeDasharray="3 3" />
-    <path d="M37 30h4l4 5v3H37z" />
-    <circle cx="13" cy="38" r="3.2" />
-    <circle cx="34" cy="38" r="3.2" />
-  </svg>
-);
-const trailerIcon = (
-  <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="2">
-    <rect x="4" y="16" width="30" height="16" />
-    <path d="M34 24h6l4 5v3h-10z" />
-    <circle cx="12" cy="38" r="3.2" />
-    <circle cx="26" cy="38" r="3.2" />
-    <circle cx="40" cy="38" r="3.2" />
-  </svg>
-);
-const pinRouteIcon = (
-  <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="2">
-    <path d="M12 44s10-9 10-18a10 10 0 1 0-20 0c0 9 10 18 10 18Z" />
-    <circle cx="12" cy="26" r="3.5" />
-    <path d="M22 30c8 4 12-2 20 2" strokeDasharray="3 4" />
-    <path d="M42 24v10" />
-    <path d="M38 30l4 4 4-4" />
-  </svg>
-);
-const shieldIcon = (
-  <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="2">
-    <path d="M24 4l16 6v11c0 10-7 17-16 21C15 38 8 31 8 21V10z" />
-    <path d="M17 23l5 5 9-10" />
-  </svg>
-);
 
 export const SERVICES: Service[] = [
   {
@@ -105,7 +51,7 @@ export const SERVICES: Service[] = [
       { title: "Pengiriman Laut", desc: "Kontainer diangkut menuju pelabuhan keberangkatan dan dikirim melalui jalur laut." },
       { title: "Monitoring & Delivery", desc: "Perjalanan dipantau hingga kontainer tiba di tujuan dan dilanjutkan dengan proses delivery sesuai layanan yang dipilih." },
     ],
-    icon: containerIcon,
+    icon: ContainerIcon,
   },
   {
     slug: "sea-freight-lcl",
@@ -133,7 +79,7 @@ export const SERVICES: Service[] = [
       { title: "Pengiriman Laut", desc: "Barang diberangkatkan melalui jalur laut menuju pelabuhan tujuan." },
       { title: "Monitoring & Delivery", desc: "Perjalanan dipantau hingga kontainer tiba di tujuan dan dilanjutkan dengan proses delivery sesuai layanan yang dipilih." },
     ],
-    icon: boxesIcon,
+    icon: BoxesIcon,
   },
   {
     slug: "land-freight",
@@ -162,7 +108,7 @@ export const SERVICES: Service[] = [
       { title: "Monitoring", desc: "Perjalanan pengiriman dipantau selama proses pengangkutan hingga mencapai lokasi tujuan." },
       { title: "Delivery & Serah Terima", desc: "Barang tiba di lokasi tujuan dan dilakukan proses unloading serta serah terima kepada pihak penerima." },
     ],
-    icon: truckIcon,
+    icon: TruckIcon,
   },
   {
     slug: "flat-rack",
@@ -192,7 +138,7 @@ export const SERVICES: Service[] = [
       { title: "Unloading & Serah Terima", desc: "Muatan diturunkan dan dilakukan proses serah terima di lokasi tujuan." },
       { title: "Pemeriksaan Kondisi Muatan di Tujuan", desc: "Setibanya di kota tujuan, tim melakukan pemeriksaan kondisi kendaraan, kontainer, dan muatan, termasuk dokumentasi kondisi fisik untuk memastikan tidak terdapat kerusakan selama proses pengiriman." },
     ],
-    icon: flatRackIcon,
+    icon: PackageOpenIcon,
   },
   {
     slug: "container-transportation",
@@ -220,7 +166,7 @@ export const SERVICES: Service[] = [
       { title: "Monitoring", desc: "Perjalanan dipantau hingga kontainer mencapai titik tujuan." },
       { title: "Delivery & Serah Terima", desc: "Kontainer tiba di lokasi tujuan dan dilakukan proses serah terima." },
     ],
-    icon: trailerIcon,
+    icon: ForkliftIcon,
   },
   {
     slug: "pickup-delivery",
@@ -294,7 +240,7 @@ export const SERVICES: Service[] = [
       { title: "Pengangkutan", desc: "Muatan diangkut menuju titik tujuan melalui rute yang telah ditentukan." },
       { title: "Delivery & Serah Terima", desc: "Barang atau kontainer tiba di titik tujuan sesuai skema layanan. Proses pengiriman diselesaikan dengan serah terima kepada pihak yang dituju." },
     ],
-    icon: pinRouteIcon,
+    icon: MapPinnedIcon,
   },
   {
     slug: "insurance",
@@ -324,7 +270,7 @@ export const SERVICES: Service[] = [
       { title: "Pengiriman", desc: "Barang dikirim sesuai layanan yang dipilih dengan perlindungan asuransi yang telah disiapkan." },
       { title: "Proses Klaim", desc: "Apabila terjadi kejadian yang termasuk dalam pertanggungan, proses klaim dilakukan sesuai prosedur dan ketentuan polis yang berlaku." },
     ],
-    icon: shieldIcon,
+    icon: ShieldCheckIcon,
   },
 ];
 
