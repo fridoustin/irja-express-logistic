@@ -30,14 +30,6 @@ export default function Header() {
   }, []);
 
   useEffect(() => {
-    if ("scrollRestoration" in history) history.scrollRestoration = "manual";
-  }, []);
-
-  useEffect(() => {
-    if (!window.location.hash) window.scrollTo(0, 0);
-  }, [pathname]);
-
-  useEffect(() => {
     document.body.style.overflow = mobileOpen ? "hidden" : "";
     return () => {
       document.body.style.overflow = "";
