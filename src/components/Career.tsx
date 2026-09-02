@@ -1,7 +1,7 @@
 import Reveal from "./Reveal";
 import CareerApplicationForm from "./CareerApplicationForm";
-import { JOBS } from "@/data/careers";
-import { ArrowRightIcon } from "./Icons";
+import { INTERNSHIP, JOBS } from "@/data/careers";
+import { ArrowRightIcon, BriefcaseIcon } from "./Icons";
 
 export default function Career() {
   return (
@@ -20,9 +20,36 @@ export default function Career() {
             <h2>Bergabung Bersama Tim Kami</h2>
             <p>Kami selalu mencari individu terbaik untuk tumbuh bersama PT Irja Express Logistic.</p>
           </Reveal>
-
-          {JOBS.length > 0 ? (
-            <div className="job-list stagger">
+          <div className="job-list stagger">
+            <Reveal className="job-card">
+              <div className="job-card-head">
+                <h3>{INTERNSHIP.title}</h3>
+                <div className="job-meta">
+                  <span className="chip">Internship</span>
+                </div>
+              </div>
+              <p className="internship-tagline">{INTERNSHIP.tagline}</p>
+              <p className="internship-intro">{INTERNSHIP.intro}</p>
+              <div className="job-card-body">
+                <div>
+                  <h4>What You Can Learn</h4>
+                  <ul>
+                    {INTERNSHIP.learn.map((l) => (
+                      <li key={l}>{l}</li>
+                    ))}
+                  </ul>
+                </div>
+                <div>
+                  <h4>Who Can Apply?</h4>
+                  <p>{INTERNSHIP.whoCanApply}</p>
+                </div>
+              </div>
+              <p className="internship-cta-text">{INTERNSHIP.cta}</p>
+              <a href="#lamar" className="btn btn-primary">
+                Lamar Program Internship
+                {ArrowRightIcon}
+              </a>
+            </Reveal>
               {JOBS.map((job) => (
                 <Reveal key={job.slug} className="job-card">
                   <div className="job-card-head">
@@ -57,19 +84,18 @@ export default function Career() {
                   </a>
                 </Reveal>
               ))}
-            </div>
-          ) : (
-            <Reveal className="job-empty">
-              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="2">
-                <rect x="6" y="16" width="36" height="24" rx="2" />
-                <path d="M17 16v-4a4 4 0 0 1 4-4h6a4 4 0 0 1 4 4v4M6 26h36" />
-              </svg>
-              <p>
-                Saat ini belum tersedia lowongan pekerjaan. Silakan kirim CV Anda melalui
-                email untuk menjadi bagian dari database kandidat kami.
-              </p>
-            </Reveal>
-          )}
+
+            {JOBS.length === 0 && (
+              <Reveal className="job-empty">
+                {BriefcaseIcon}
+                <p>
+                  Saat ini belum ada posisi reguler lainnya yang dibuka. Program
+                  Internship di atas selalu terbuka bagi mahasiswa yang ingin
+                  bergabung.
+                </p>
+              </Reveal>
+            )}
+          </div>
         </div>
       </section>
 

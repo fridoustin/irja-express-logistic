@@ -63,6 +63,7 @@ export default function CareerApplicationForm({ jobs }: { jobs: Job[] }) {
             <option value="" disabled>
               Pilih posisi
             </option>
+            <option value="Program Internship">Program Internship</option>
             {jobs.map((j) => (
               <option key={j.slug} value={j.title}>
                 {j.title}

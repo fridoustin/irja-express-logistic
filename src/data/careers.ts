@@ -22,3 +22,21 @@ export type Job = {
 // Selama array ini kosong, halaman Career otomatis menampilkan pesan
 // "belum ada lowongan" beserta formulir lamaran umum.
 export const JOBS: Job[] = [];
+
+export const INTERNSHIP = {
+  title: "Internship at IRJA Express Logistics",
+  tagline: "Start Your Learning Journey with IRJA",
+  intro:
+    "Sedang mencari tempat untuk mengembangkan pengalaman dan pengetahuan di dunia kerja? IRJA Express Logistics membuka kesempatan bagi mahasiswa yang ingin mendapatkan pengalaman langsung di industri logistik melalui program internship.",
+  learn: [
+    "Mengenal proses operasional dan administrasi logistik",
+    "Memahami alur pengiriman cargo dari origin hingga destination",
+    "Mendukung aktivitas marketing, sales, dan business development",
+    "Belajar mengenai customer service dan koordinasi pengiriman",
+    "Mengembangkan kemampuan komunikasi, teamwork, problem solving, dan professional skills",
+  ],
+  whoCanApply:
+    "Program ini terbuka bagi mahasiswa aktif yang ingin mendapatkan pengalaman kerja dan memiliki semangat untuk belajar serta berkembang bersama IRJA.",
+  cta:
+    "Kirimkan CV dan informasi internship dari kampusmu melalui kontak yang tersedia, dan ceritakan kepada kami bagaimana kamu ingin belajar dan berkontribusi.",
+};
