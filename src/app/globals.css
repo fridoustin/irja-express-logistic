@@ -9,7 +9,7 @@
   --tan-100: #f5efe3;
   --cream: #faf7f0;
   --charcoal: #211f1b;
-  --charcoal-60: rgba(33, 31, 27, 0.62);
+  --black: #000000;
   --white: #ffffff;
   --line: rgba(33, 31, 27, 0.12);
   --shadow: 0 20px 50px -20px rgba(22, 40, 26, 0.35);
@@ -189,7 +189,7 @@ nav a {
   font-size: 16.5px;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.88);
+  color: #fff;
   position: relative;
   padding: 4px 0;
   transition: color 0.3s var(--ease);
@@ -240,15 +240,6 @@ header.site-header.scrolled .brand img {
   background: #fff;
   transition: 0.35s var(--ease);
   display: block;
-}
-.burger.open span:nth-child(1) {
-  transform: translateY(7px) rotate(45deg);
-}
-.burger.open span:nth-child(2) {
-  opacity: 0;
-}
-.burger.open span:nth-child(3) {
-  transform: translateY(-7px) rotate(-45deg);
 }
 
 /* ===== HERO ===== */
@@ -318,7 +309,7 @@ header.site-header.scrolled .brand img {
 .hero-content p {
   font-size: 18px;
   line-height: 1.7;
-  color: rgba(255, 255, 255, 0.78);
+  color: #fff;
   max-width: 520px;
   margin-bottom: 38px;
   opacity: 0;
@@ -347,7 +338,7 @@ header.site-header.scrolled .brand img {
   display: flex;
   align-items: center;
   gap: 12px;
-  color: rgba(255, 255, 255, 0.65);
+  color: #fff;
   font-family: var(--font-mono), monospace;
   font-size: 11px;
   letter-spacing: 0.14em;
@@ -400,7 +391,7 @@ section {
   margin-top: 16px;
   font-size: 16.5px;
   line-height: 1.75;
-  color: var(--charcoal-60);
+  color: var(--black);
   max-width: 8000px;
 }
 
@@ -493,7 +484,7 @@ section {
 .overview-text p {
   font-size: 16.5px;
   line-height: 1.85;
-  color: var(--charcoal-60);
+  color: var(--black);
   margin-bottom: 18px;
 }
 .overview-points {
@@ -537,10 +528,6 @@ section {
     background 0.4s var(--ease),
     transform 0.4s var(--ease);
 }
-.why-card:hover {
-  background: var(--white);
-  transform: translateY(-4px);
-}
 .why-card .icon {
   width: 52px;
   height: 52px;
@@ -563,7 +550,7 @@ section {
 .why-card p {
   font-size: 14.5px;
   line-height: 1.7;
-  color: var(--charcoal-60);
+  color: var(--black);
 }
 .why-card .idx {
   font-family: var(--font-mono), monospace;
@@ -582,7 +569,7 @@ section {
   color: #fff;
 }
 .services .section-head p {
-  color: rgba(255, 255, 255, 0.6);
+  color: #fff;
 }
 .services .section-head .eyebrow {
   color: var(--tan-300);
@@ -627,7 +614,7 @@ section {
 .service-card p {
   font-size: 14.5px;
   line-height: 1.7;
-  color: rgba(255, 255, 255, 0.62);
+  color: #fff;
   margin-bottom: 22px;
   flex: 1;
 }
@@ -663,15 +650,15 @@ section {
 .stats-grid {
   position: relative;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   gap: 20px;
 }
 .stats-grid::before {
   content: "";
   position: absolute;
   top: 26px;
-  left: 16.6667%;
-  right: 16.6667%;
+  left: 10%;
+  right: 10%;
   height: 0;
   border-top: 2px dashed var(--green-600);
   z-index: 0;
@@ -785,7 +772,7 @@ section {
 .testi-who span {
   font-family: var(--font-mono), monospace;
   font-size: 12px;
-  color: var(--charcoal-60);
+  color: var(--black);
 }
 
 .testi-dots {
@@ -873,7 +860,7 @@ section {
   text-transform: uppercase;
 }
 .cta p {
-  color: rgba(255, 255, 255, 0.75);
+  color: #fff;
   font-size: 17px;
   margin-bottom: 38px;
 }
@@ -887,7 +874,7 @@ section {
 /* ===== FOOTER ===== */
 footer {
   background: var(--green-700);
-  color: rgba(255, 255, 255, 0.7);
+  color: #fff;
   padding: 80px 0 30px;
 }
 .foot-grid {
@@ -960,7 +947,7 @@ footer ul a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: rgba(255, 255, 255, 0.8);
+  color: #fff;
   transition: background 0.3s, border-color 0.3s, color 0.3s;
 }
 .foot-contact-social-icon svg {
@@ -1219,13 +1206,13 @@ footer ul a:hover {
 .mobile-nav-idx {
   font-family: var(--font-mono), monospace;
   font-size: 10.5px;
-  color: rgba(255, 255, 255, 0.4);
+  color: #fff;
 }
 .mobile-nav-arrow {
   flex: none;
   width: 16px;
   height: 16px;
-  color: rgba(255, 255, 255, 0.4);
+  color: #fff;
   transition: transform 0.3s var(--ease), color 0.3s var(--ease);
 }
 .mobile-nav-item:hover .mobile-nav-label,
@@ -1269,7 +1256,7 @@ footer ul a:hover {
   height: 36px;
   border-radius: 50%;
   border: 1px solid rgba(255, 255, 255, 0.25);
-  color: rgba(255, 255, 255, 0.8);
+  color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1298,8 +1285,8 @@ footer ul a:hover {
     grid-template-columns: repeat(2, 1fr);
   }
   .stats-grid {
-    grid-template-columns: repeat(2, 1fr);
-    row-gap: 44px;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 40px;
   }
   .stats-grid::before {
     display: none;
@@ -1437,7 +1424,7 @@ footer ul a:hover {
 .license-card p {
   font-size: 14.5px;
   line-height: 1.75;
-  color: var(--charcoal-60);
+  color: var(--black);
 }
 .license-card .icon {
   width: 40px;
@@ -1492,7 +1479,7 @@ footer ul a:hover {
 .vm-block p {
   font-size: 16px;
   line-height: 1.8;
-  color: rgba(255, 255, 255, 0.75);
+  color: #fff;
 }
 .vm-list {
   display: flex;
@@ -1505,7 +1492,7 @@ footer ul a:hover {
   gap: 12px;
   font-size: 15px;
   line-height: 1.6;
-  color: rgba(255, 255, 255, 0.85);
+  color: #fff;
 }
 .vm-list svg {
   flex: none;
@@ -1570,10 +1557,6 @@ footer ul a:hover {
     background 0.4s var(--ease),
     transform 0.4s var(--ease);
 }
-.job-card:hover {
-  background: var(--white);
-  transform: translateY(-3px);
-}
 .job-card-head {
   display: flex;
   flex-wrap: wrap;
@@ -1628,7 +1611,7 @@ footer ul a:hover {
 .job-card-body li {
   font-size: 14.5px;
   line-height: 1.6;
-  color: var(--charcoal-60);
+  color: var(--black);
   padding-left: 18px;
   position: relative;
 }
@@ -1661,7 +1644,34 @@ footer ul a:hover {
 .job-empty p {
   font-size: 16px;
   line-height: 1.7;
-  color: var(--charcoal-60);
+  color: var(--black);
+}
+.internship-tagline {
+  font-family: var(--font-mono), monospace;
+  font-size: 12px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--green-600);
+  margin-bottom: 14px;
+}
+.internship-intro {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--black);
+  margin-bottom: 22px;
+}
+.job-card-body p {
+  font-size: 14.5px;
+  line-height: 1.6;
+  color: var(--black);
+}
+.internship-cta-text {
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--black);
+  margin-bottom: 20px;
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
 }
 
 @media (max-width: 720px) {
@@ -1688,6 +1698,7 @@ footer ul a:hover {
   display: flex;
   flex-direction: column;
   gap: 8px;
+  min-width: 0;
 }
 .field label {
   font-family: var(--font-mono), monospace;
@@ -1699,7 +1710,7 @@ footer ul a:hover {
 .field .hint {
   text-transform: none;
   letter-spacing: 0;
-  color: var(--charcoal-60);
+  color: var(--black);
   font-size: 11.5px;
 }
 .field input[type="text"],
@@ -1715,6 +1726,7 @@ footer ul a:hover {
   background: var(--white);
   color: var(--charcoal);
   transition: border-color 0.3s var(--ease);
+  min-width: 0;
 }
 .field input:focus,
 .field select:focus,
@@ -1730,7 +1742,7 @@ footer ul a:hover {
   font-family: var(--font-body), sans-serif;
   font-size: 13.5px;
   padding: 11px 4px;
-  color: var(--charcoal-60);
+  color: var(--black);
 }
 .field input[type="file"]::file-selector-button {
   font-family: var(--font-display), sans-serif;
@@ -2000,10 +2012,6 @@ footer ul a:hover {
     background 0.4s var(--ease),
     transform 0.4s var(--ease);
 }
-.contact-card:hover {
-  background: var(--white);
-  transform: translateY(-3px);
-}
 .contact-card .icon {
   width: 30px;
   height: 30px;
@@ -2115,7 +2123,7 @@ footer ul a:hover {
 .branch-card p {
   font-size: 13.5px;
   line-height: 1.6;
-  color: var(--charcoal-60);
+  color: var(--black);
   margin-bottom: 18px;
 }
 .branch-map {
@@ -2207,7 +2215,7 @@ footer ul a:hover {
 .history-text p {
   font-size: 15px;
   line-height: 1.85;
-  color: var(--charcoal-60);
+  color: var(--black);
   margin-bottom: 18px;
 }
 .history-text p:last-child {
@@ -2229,6 +2237,9 @@ footer ul a:hover {
 }
 
 /* ===== ABOUT: COMPANY VALUES (IRJA monogram cards) ===== */
+.why-values {
+  background: var(--white);
+}
 .values-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -2238,13 +2249,13 @@ footer ul a:hover {
 }
 .value-card {
   position: relative;
-  background: var(--tan-100);
+  background: var(--white);
   padding: 40px 30px 34px;
   overflow: hidden;
   transition: background 0.4s var(--ease), transform 0.4s var(--ease);
 }
 .value-card:hover {
-  background: var(--white);
+  background: var(--tan-100);
   transform: translateY(-4px);
 }
 .value-letter {
@@ -2288,7 +2299,7 @@ footer ul a:hover {
   z-index: 1;
   font-size: 13.5px;
   line-height: 1.75;
-  color: var(--charcoal-60);
+  color: var(--black);
 }
 
 @media (max-width: 980px) {
@@ -2315,10 +2326,6 @@ footer ul a:hover {
   padding: 32px 28px;
   transition: background 0.4s var(--ease), transform 0.4s var(--ease);
 }
-.cargo-card:hover {
-  background: var(--white);
-  transform: translateY(-4px);
-}
 .cargo-card .idx {
   font-family: var(--font-mono), monospace;
   font-size: 12px;
@@ -2337,13 +2344,13 @@ footer ul a:hover {
 .cargo-card p {
   font-size: 13.5px;
   line-height: 1.7;
-  color: var(--charcoal-60);
+  color: var(--black);
 }
 .cargo-note {
   margin-top: 28px;
   font-size: 13.5px;
   line-height: 1.7;
-  color: var(--charcoal-60);
+  color: var(--black);
   max-width: 760px;
 }
 
@@ -2490,12 +2497,12 @@ footer ul a:hover {
 }
 .scheme-subtitle {
   font-size: 12px;
-  color: var(--charcoal-60);
+  color: var(--black);
 }
 .scheme-blurb {
   font-size: 12.5px;
   line-height: 1.55;
-  color: var(--charcoal-60);
+  color: var(--black);
   margin-top: 4px;
   min-height: 4.65em;
 }
@@ -2603,7 +2610,7 @@ footer ul a:hover {
 .scheme-actor p {
   font-size: 12.5px;
   line-height: 1.6;
-  color: var(--charcoal-60);
+  color: var(--black);
   margin: 0;
 }
 
@@ -2629,7 +2636,7 @@ footer ul a:hover {
 .scheme-callout p {
   font-size: 13px;
   line-height: 1.65;
-  color: var(--charcoal-60);
+  color: var(--black);
   margin: 0;
 }
 .scheme-callout p b {
