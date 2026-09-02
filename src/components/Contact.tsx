@@ -8,7 +8,7 @@ const CONTACT_INFO = [
   {
     title: "Alamat Kantor Pusat",
     icon: PinIcon,
-    value: "Jl. Raya Logistik No. 88, Surabaya, Jawa Timur, Indonesia",
+    value: "Jl. Demak Timur X No.1, Gundih, Kec. Bubutan, Surabaya, Jawa Timur 60172",
   },
   {
     title: "Telepon",
