@@ -521,10 +521,13 @@ section {
 }
 .why-card {
   background: var(--white);
-  padding: 44px 36px;
+  padding: 40px 34px 34px;
   transition:
     background 0.4s var(--ease),
     transform 0.4s var(--ease);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 .why-card:hover {
   background: var(--tan-100); 
@@ -552,7 +555,10 @@ section {
   font-size: 14.5px;
   line-height: 1.7;
   color: var(--black);
+  margin-bottom: 22px;
+  flex: 1;
 }
+
 .why-card .idx {
   font-family: var(--font-mono), monospace;
   font-size: 12px;
@@ -1403,6 +1409,48 @@ footer ul a:hover {
     url("/images/header-contact.png") center / cover no-repeat;
   background-blend-mode: multiply;
 }
+.service-banner-sea-freight-fcl {
+  background:
+    rgba(57, 114, 70, 0.8)
+    url("/images/service-fcl.png") center / cover no-repeat;
+  background-blend-mode: multiply;
+}
+.service-banner-sea-freight-lcl {
+  background:
+    rgba(57, 114, 70, 0.8)
+    url("/images/service-lcl.png") center / cover no-repeat;
+  background-blend-mode: multiply;
+}
+.service-banner-land-freight {
+  background:
+    rgba(57, 114, 70, 0.8)
+    url("/images/service-land-freight.png") center / cover no-repeat;
+  background-blend-mode: multiply;
+}
+.service-banner-flat-rack {
+  background:
+    rgba(57, 114, 70, 0.8)
+    url("/images/service-flat-rack.png") center / cover no-repeat;
+  background-blend-mode: multiply;
+}
+.service-banner-container-transportation {
+  background:
+    rgba(57, 114, 70, 0.8)
+    url("/images/service-container-transportation.png") center / cover no-repeat;
+  background-blend-mode: multiply;
+}
+.service-banner-pickup-delivery {
+  background:
+    rgba(57, 114, 70, 0.8)
+    url("/images/service-pickup-delivery.png") center / cover no-repeat;
+  background-blend-mode: multiply;
+}
+.service-banner-insurance {
+  background:
+    rgba(57, 114, 70, 0.8)
+    url("/images/service-insurance.png") center / cover no-repeat;
+  background-blend-mode: multiply;
+}
 .page-banner h1 {
   font-family: var(--font-display), sans-serif;
   font-weight: 800;
@@ -1569,7 +1617,22 @@ footer ul a:hover {
   background: var(--tan-100);
 }
 .why-card .service-link {
+  font-family: var(--font-mono), monospace;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
   color: var(--green-700);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.why-card .service-link svg {
+  width: 13px;
+  height: 13px;
+  transition: transform 0.3s var(--ease);
+}
+.why-card:hover .service-link svg {
+  transform: translateX(5px);
 }
 
 /* ===== CAREER: JOB LISTINGS ===== */
