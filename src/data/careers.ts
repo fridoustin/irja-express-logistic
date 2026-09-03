@@ -24,7 +24,7 @@ export type Job = {
 export const JOBS: Job[] = [];
 
 export const INTERNSHIP = {
-  title: "Internship at IRJA Express Logistics",
+  title: "Internship at IRJA Express Logistic",
   tagline: "Start Your Learning Journey with IRJA",
   intro:
     "Sedang mencari tempat untuk mengembangkan pengalaman dan pengetahuan di dunia kerja? IRJA Express Logistics membuka kesempatan bagi mahasiswa yang ingin mendapatkan pengalaman langsung di industri logistik melalui program internship.",
