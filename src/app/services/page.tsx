@@ -28,15 +28,19 @@ export default function ServicesPage() {
             </Reveal>
             <div className="why-grid stagger">
               {SERVICES.map((s) => (
-                <Reveal key={s.slug} className="why-card services-index-card">
+                <Link
+                  key={s.slug}
+                  href={`/services/${s.slug}`}
+                  className="why-card services-index-card"
+                >
                   <div className="icon">{s.icon}</div>
                   <h3>{s.title}</h3>
                   <p>{s.summary}</p>
-                  <Link href={`/services/${s.slug}`} className="service-link">
+                  <div className="service-link">
                     Selengkapnya
                     {ArrowRightIcon}
-                  </Link>
-                </Reveal>
+                  </div>
+                </Link>
               ))}
             </div>
           </div>

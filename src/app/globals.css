@@ -648,6 +648,29 @@ section {
   margin-top: 56px;
   text-align: center;
 }
+.service-back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 24px;
+  font-family: var(--font-mono), monospace;
+  font-size: 12.5px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--tan-300);
+  transition: gap 0.3s var(--ease), color 0.3s var(--ease);
+}
+.service-back-link svg {
+  width: 15px;
+  height: 15px;
+  transition: transform 0.3s var(--ease);
+}
+.service-back-link:hover {
+  color: #fff;
+}
+.service-back-link:hover svg {
+  transform: translateX(-3px);
+}
 
 /* ===== STATS ===== */
 .stats {

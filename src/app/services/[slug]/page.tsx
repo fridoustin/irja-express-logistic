@@ -8,6 +8,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { SERVICES, getService } from "@/data/services";
 import { CheckIcon } from "@/components/Icons";
+import BackButton from "@/components/BackButton";
 
 export function generateStaticParams() {
   return SERVICES.map((s) => ({ slug: s.slug }));
@@ -28,7 +29,12 @@ export default async function ServiceDetailPage({
       <main>
         <section className="page-banner">
           <div className="wrap">
-            <span className="eyebrow on-dark">Services</span>
+            <Link href="/services" className="service-back-link">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <path d="M19 12H5M11 18l-6-6 6-6" />
+              </svg>
+              Kembali ke Semua Layanan
+            </Link>
             <h1>{service.title}</h1>
           </div>
         </section>
@@ -121,6 +127,14 @@ export default async function ServiceDetailPage({
                 </Reveal>
               ))}
             </div>
+          </div>
+          <div className="wrap" style={{ textAlign: "center", marginTop: 64 }}>
+            <BackButton className="btn btn-primary">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <path d="M19 12H5M11 18l-6-6 6-6" />
+              </svg>
+              Kembali Ke Semua Layanan
+            </BackButton>
           </div>
         </section>
       </main>
