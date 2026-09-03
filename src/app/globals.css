@@ -1595,7 +1595,7 @@ footer ul a:hover {
   border: 1px solid var(--tan-300);
   border-radius: 999px;
   color: var(--green-700);
-  background: var(--tan-200);
+  background: var(--white);
 }
 .job-card-body {
   display: grid;
@@ -1640,8 +1640,8 @@ footer ul a:hover {
   text-align: center;
   padding: 56px 40px;
   border: 1px dashed var(--tan-300);
-  border-radius: 4px;
-  background: var(--tan-100);
+  border-radius: 8px;
+  background: var(--white);
 }
 .job-empty svg {
   width: 44px;
@@ -2004,6 +2004,9 @@ footer ul a:hover {
   .gallery-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
+  }
+  .gallery-caption {
+    display: none;
   }
   .lightbox {
     padding: 16px;
