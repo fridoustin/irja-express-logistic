@@ -21,6 +21,52 @@ export default function Career() {
             <p>Kami selalu mencari individu terbaik untuk tumbuh bersama PT Irja Express Logistic.</p>
           </Reveal>
           <div className="job-list stagger">
+            {JOBS.length === 0 && (
+              <Reveal className="job-empty">
+                {BriefcaseIcon}
+                <p>
+                  Saat ini belum ada posisi reguler lainnya yang dibuka. Program
+                  Internship di bawah selalu terbuka bagi mahasiswa yang ingin
+                  bergabung.
+                </p>
+              </Reveal>
+            )}
+
+            {JOBS.map((job) => (
+              <Reveal key={job.slug} className="job-card">
+                <div className="job-card-head">
+                  <h3>{job.title}</h3>
+                  <div className="job-meta">
+                    <span className="chip">{job.department}</span>
+                    <span className="chip">{job.location}</span>
+                    <span className="chip">{job.type}</span>
+                  </div>
+                </div>
+                <div className="job-card-body">
+                  <div>
+                    <h4>Tanggung Jawab</h4>
+                    <ul>
+                      {job.responsibilities.map((r) => (
+                        <li key={r}>{r}</li>
+                      ))}
+                    </ul>
+                  </div>
+                  <div>
+                    <h4>Persyaratan</h4>
+                    <ul>
+                      {job.requirements.map((r) => (
+                        <li key={r}>{r}</li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+                <a href="#lamar" className="btn btn-primary">
+                  Lamar Posisi Ini
+                  {ArrowRightIcon}
+                </a>
+              </Reveal>
+            ))}
+
             <Reveal className="job-card">
               <div className="job-card-head">
                 <h3>{INTERNSHIP.title}</h3>
@@ -50,51 +96,6 @@ export default function Career() {
                 {ArrowRightIcon}
               </a>
             </Reveal>
-              {JOBS.map((job) => (
-                <Reveal key={job.slug} className="job-card">
-                  <div className="job-card-head">
-                    <h3>{job.title}</h3>
-                    <div className="job-meta">
-                      <span className="chip">{job.department}</span>
-                      <span className="chip">{job.location}</span>
-                      <span className="chip">{job.type}</span>
-                    </div>
-                  </div>
-                  <div className="job-card-body">
-                    <div>
-                      <h4>Tanggung Jawab</h4>
-                      <ul>
-                        {job.responsibilities.map((r) => (
-                          <li key={r}>{r}</li>
-                        ))}
-                      </ul>
-                    </div>
-                    <div>
-                      <h4>Persyaratan</h4>
-                      <ul>
-                        {job.requirements.map((r) => (
-                          <li key={r}>{r}</li>
-                        ))}
-                      </ul>
-                    </div>
-                  </div>
-                  <a href="#lamar" className="btn btn-primary">
-                    Lamar Posisi Ini
-                    {ArrowRightIcon}
-                  </a>
-                </Reveal>
-              ))}
-
-            {JOBS.length === 0 && (
-              <Reveal className="job-empty">
-                {BriefcaseIcon}
-                <p>
-                  Saat ini belum ada posisi reguler lainnya yang dibuka. Program
-                  Internship di atas selalu terbuka bagi mahasiswa yang ingin
-                  bergabung.
-                </p>
-              </Reveal>
-            )}
           </div>
         </div>
       </section>

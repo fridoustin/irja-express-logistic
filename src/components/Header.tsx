@@ -64,11 +64,6 @@ export default function Header() {
               ))}
             </ul>
           </nav>
-          <div className="header-cta">
-            <Link href="/contact" className="btn btn-primary">
-              Hubungi Kami
-            </Link>
-          </div>
           <button
             className={`burger ${mobileOpen ? "open" : ""}`}
             aria-label={mobileOpen ? "Tutup menu" : "Buka menu"}

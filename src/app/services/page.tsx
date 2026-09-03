@@ -28,7 +28,7 @@ export default function ServicesPage() {
             </Reveal>
             <div className="why-grid stagger">
               {SERVICES.map((s) => (
-                <Reveal key={s.slug} className="why-card">
+                <Reveal key={s.slug} className="why-card services-index-card">
                   <div className="icon">{s.icon}</div>
                   <h3>{s.title}</h3>
                   <p>{s.summary}</p>
@@ -42,7 +42,7 @@ export default function ServicesPage() {
           </div>
         </section>
 
-        <section className="why">
+        <section>
           <div className="wrap">
             <Reveal className="section-head">
               <span className="eyebrow">Kategori Barang Kiriman</span>
