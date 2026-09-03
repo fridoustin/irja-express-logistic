@@ -12,7 +12,7 @@ type Stat = { label: string; icon: React.ReactNode } & (
 
 const STATS: Stat[] = [
   { count: new Date().getFullYear() - FOUNDED_YEAR, suffix: "+", label: "Tahun Pengalaman", icon: CalendarIcon },
-  { count: 425, suffix: "+", label: "Klien di Seluruh Indonesia", icon: UsersIcon },
+  { count: 875, suffix: "+", label: "Klien di Seluruh Indonesia", icon: UsersIcon },
   { stars: true, label: "Kepuasan Pelanggan", icon: StarBadgeIcon },
   { count: 120, suffix: "rb+", label: "Total Pengiriman", icon: BoxIcon },
   { count: 240, suffix: "jt+", label: "Km Jarak Tempuh Kapal", icon: RouteIcon },
