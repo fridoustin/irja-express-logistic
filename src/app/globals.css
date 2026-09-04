@@ -2249,6 +2249,8 @@ footer ul a:hover {
 .branch-card {
   background: var(--tan-100);
   padding: 28px;
+  display: flex;
+  flex-direction: column;
 }
 .branch-card h4 {
   font-family: var(--font-display), sans-serif;
@@ -2269,6 +2271,7 @@ footer ul a:hover {
   border-radius: 2px;
   overflow: hidden;
   border: 1px solid var(--tan-300);
+  margin-top: auto;
 }
 .branch-map iframe {
   width: 100%;
