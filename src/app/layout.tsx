@@ -23,6 +23,7 @@ const plexMono = IBM_Plex_Mono({
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
+  colorScheme: "light",
 };
 
 export const metadata: Metadata = {
@@ -42,7 +43,6 @@ export const metadata: Metadata = {
     locale: "id_ID",
     type: "website",
   },
-  colorScheme: "light",
 };
 
 export default function RootLayout({
