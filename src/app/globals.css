@@ -14,6 +14,7 @@
   --line: rgba(33, 31, 27, 0.12);
   --shadow: 0 20px 50px -20px rgba(22, 40, 26, 0.35);
   --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  color-scheme: light;
 }
 
 * {
