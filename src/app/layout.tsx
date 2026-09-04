@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Barlow_Condensed, Work_Sans, IBM_Plex_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -19,6 +19,11 @@ const plexMono = IBM_Plex_Mono({
   weight: ["500", "600"],
   variable: "--font-mono",
 });
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+};
 
 export const metadata: Metadata = {
   title: "PT Irja Express Logistic — Solusi Logistik Cepat, Aman & Terpercaya",
