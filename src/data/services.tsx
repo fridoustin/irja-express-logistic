@@ -6,6 +6,7 @@ export type Service = {
   title: string;
   summary: string;
   description: string;
+  image?: string;
   advantages: string[];
   serviceArea?: string;
   fleetTypes?: string[];
@@ -28,6 +29,7 @@ export const SERVICES: Service[] = [
   {
     slug: "sea-freight-fcl",
     title: "Sea Freight — Full Container Load (FCL)",
+    image: "/images/services/sea-freight-fcl.png",
     summary:
       "Pengiriman barang melalui jalur laut menggunakan kontainer penuh 20', 21', dan 40' untuk kebutuhan muatan dalam jumlah besar.",
     description:
@@ -56,6 +58,7 @@ export const SERVICES: Service[] = [
   {
     slug: "sea-freight-lcl",
     title: "Sea Freight — Less Than Container Load (LCL)",
+    image: "/images/services/sea-freight-lcl.png",
     summary:
       "Pengiriman barang melalui jalur laut untuk muatan yang tidak membutuhkan satu kontainer penuh dengan sistem konsolidasi.",
     description:
@@ -84,6 +87,7 @@ export const SERVICES: Service[] = [
   {
     slug: "land-freight",
     title: "Land Freight",
+    image: "/images/services/land-freight.png",
     summary:
       "Layanan pengangkutan barang melalui jalur darat untuk mendukung distribusi antarkota dan antarwilayah di Pulau Jawa dengan pilihan armada sesuai kebutuhan muatan.",
     description:
@@ -113,6 +117,7 @@ export const SERVICES: Service[] = [
   {
     slug: "flat-rack",
     title: "Flat Rack",
+    image: "/images/services/flat-rack.png",
     summary:
       "Layanan pengangkutan menggunakan flat rack untuk kontainer dan berbagai jenis cargo yang membutuhkan area muatan terbuka.",
     description:
@@ -143,6 +148,7 @@ export const SERVICES: Service[] = [
   {
     slug: "container-transportation",
     title: "Container Transportation",
+    image: "/images/services/container-transportation.png",
     summary:
       "Transportasi kontainer dari dan menuju pelabuhan, depo, gudang, maupun lokasi pelanggan dengan armada yang sesuai.",
     description:
@@ -171,6 +177,7 @@ export const SERVICES: Service[] = [
   {
     slug: "pickup-delivery",
     title: "Pickup & Delivery",
+    image: "/images/services/pickup-delivery.png",
     summary:
       "Layanan penjemputan dan pengantaran barang dengan pilihan skema Door → Door, Door → Port, Door → CY, CY → Door, CY → Port, dan CY → CY.",
     description:
@@ -245,6 +252,7 @@ export const SERVICES: Service[] = [
   {
     slug: "insurance",
     title: "Insurance",
+    image: "/images/services/insurance.png",
     summary:
       "Perlindungan tambahan untuk barang selama proses pengiriman dengan pilihan pertanggungan yang dapat disesuaikan dengan jenis dan nilai barang.",
     description:

@@ -41,16 +41,25 @@ export default async function ServiceDetailPage({
 
         <section className="profile" style={{ paddingBottom: 24 }}>
           <div className="wrap">
-            <Reveal className="section-head" style={{ maxWidth: 720 }}>
-              <span className="eyebrow">Deskripsi Layanan</span>
-              <h2>{service.title}</h2>
-              <p>{service.description}</p>
-            </Reveal>
-            <Reveal>
-              <Link href="#contact" className="btn btn-primary">
-                Hubungi Kami
-              </Link>
-            </Reveal>
+            <div className={`service-hero-grid ${!service.image ? "no-image" : ""}`}>
+              <div>
+                <Reveal className="section-head" style={{ maxWidth: 720 }}>
+                  <span className="eyebrow">Deskripsi Layanan</span>
+                  <h2>{service.title}</h2>
+                  <p>{service.description}</p>
+                </Reveal>
+                <Reveal>
+                  <Link href="#contact" className="btn btn-primary">
+                    Hubungi Kami
+                  </Link>
+                </Reveal>
+              </div>
+              {service.image && (
+                <Reveal className="service-hero-image">
+                  <img src={service.image} alt={service.title} />
+                </Reveal>
+              )}
+            </div>
           </div>
         </section>
 
