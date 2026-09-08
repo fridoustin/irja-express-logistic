@@ -1,8 +1,16 @@
+"use client";
+
+import { useState } from "react";
 import { ChevronDown } from "lucide-react";
 import Reveal from "./Reveal";
 import { FAQS } from "@/data/faq";
 
+const INITIAL_COUNT = 3;
+
 export default function Faq() {
+  const [expanded, setExpanded] = useState(false);
+  const visibleFaqs = expanded ? FAQS : FAQS.slice(0, INITIAL_COUNT);
+
   return (
     <section className="faq">
       <div className="wrap">
@@ -13,7 +21,7 @@ export default function Faq() {
         </Reveal>
 
         <div className="faq-list stagger">
-          {FAQS.map((f) => (
+          {visibleFaqs.map((f) => (
             <Reveal as="details" key={f.question} className="faq-item">
               <summary className="faq-question">
                 <span>{f.question}</span>
@@ -27,6 +35,13 @@ export default function Faq() {
             </Reveal>
           ))}
         </div>
+
+        {FAQS.length > INITIAL_COUNT && (
+          <button type="button" className="faq-more" onClick={() => setExpanded((v) => !v)}>
+            {expanded ? "Tampilkan Lebih Sedikit" : "Selengkapnya"}
+            <ChevronDown size={15} className={`faq-more-icon${expanded ? " open" : ""}`} />
+          </button>
+        )}
       </div>
     </section>
   );

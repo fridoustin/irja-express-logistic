@@ -2878,6 +2878,31 @@ footer ul a:hover {
   line-height: 1.75;
   color: var(--charcoal-60);
 }
+.faq-more {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 32px auto 0;
+  padding: 8px 4px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: var(--font-mono), monospace;
+  font-size: 13px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--green-700);
+  transition: color 0.3s var(--ease);
+}
+.faq-more:hover {
+  color: var(--green-900);
+}
+.faq-more-icon {
+  transition: transform 0.3s var(--ease);
+}
+.faq-more-icon.open {
+  transform: rotate(180deg);
+}
 
 @media (max-width: 600px) {
   .faq-question {
