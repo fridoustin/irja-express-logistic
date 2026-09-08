@@ -9,6 +9,7 @@ import Cta from "@/components/Cta";
 import Footer from "@/components/Footer";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
 import Testimonials from "@/components/Testimonial";
+import Faq from "@/components/Faq";
 
 export default function Home() {
   return (
@@ -21,6 +22,7 @@ export default function Home() {
         <Services />
         <Stats />
         <Testimonials />
+        <Faq />
         <Cta />
       </main>
       <Footer />
