@@ -18,6 +18,31 @@ const TESTIMONIALS = [
     "Pelayanan bagus, response admin cepat bahkan saat dibutuhkan di luar jam kerja",
     name: "Kelly Karyanto",
 },
+{
+    quote:
+    "Pelayanan cepat, komunikasi jelas, dan pengiriman berjalan lancar. Sangat membantu!",
+    name: "Bima Kurniawan",
+},
+{
+    quote:
+    "Awalnya ragu menggunakan jasa baru, tapi ternyata prosesnya sangat mudah dan komunikasinya juga responsif",
+    name: "Vania Pratami",
+},
+{
+    quote:
+    "Terima kasih Irja sudah membantu proses pengiriman kami. Barangnya semua sampai dengan baik dan prosesnya juga ditangani dengan profesional",
+    name: "Timothy Molles",
+},
+{
+    quote:
+    "Pengiriman berjalan lancar sampai tujuan. Recommended pokoknya!",
+    name: "Fajar Nugroho"
+},
+{
+    quote:
+    "Responsif, informatif, dan pengirimannya berjalan mulus. Semoga ke depannya bisa terus bekerja sama yaa",
+    name: "Salsabila Putri",
+}
 ];
 
 export default function Testimonials() {
