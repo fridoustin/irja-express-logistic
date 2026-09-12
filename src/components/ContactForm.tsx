@@ -67,8 +67,8 @@ export default function ContactForm() {
 
       <div className="form-row">
         <div className="field">
-          <label htmlFor="email">Email *</label>
-          <input id="email" name="email" type="email" required />
+          <label htmlFor="email">Email (Opsional)</label>
+          <input id="email" name="email" type="email" />
         </div>
         <div className="field">
           <label htmlFor="phone">Nomor Telepon *</label>
