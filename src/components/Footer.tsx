@@ -1,11 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
 import { BRANCHES } from "@/data/branches";
-import { InstagramIcon, TikTokIcon } from "./Icons";
+import { FacebookIcon, InstagramIcon, ThreadsIcon, TikTokIcon } from "./Icons";
 
 const SOCIALS = [
   { label: "Instagram", username: "@irja_expresslogistic", href: "https://instagram.com/irja_expresslogistic", icon: InstagramIcon },
   { label: "TikTok", username: "@irja_express_logistic", href: "https://www.tiktok.com/@irja_express_logistic", icon: TikTokIcon },
+  { label: "Facebook", username: "Irja Express Logistic", href: "https://web.facebook.com/profile.php?id=61593916096875", icon: FacebookIcon },
+  { label: "Threads", username: "@irja_expresslogistic", href: "https://www.threads.com/@irja_expresslogistic", icon: ThreadsIcon },
 ];
 
 export default function Footer() {

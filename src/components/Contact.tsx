@@ -1,7 +1,7 @@
 import Reveal from "./Reveal";
 import ContactForm from "./ContactForm";
 import { BRANCHES } from "@/data/branches";
-import { ClockIcon, InstagramIcon, MailIcon, PhoneIcon, PinIcon, TikTokIcon, WhatsAppIcon } from "./Icons";
+import { ClockIcon, FacebookIcon, InstagramIcon, MailIcon, PhoneIcon, PinIcon, ThreadsIcon, TikTokIcon, WhatsAppIcon } from "./Icons";
 import { WHATSAPP_URL } from "@/lib/whatsapp";
 
 
@@ -40,6 +40,8 @@ const CONTACT_INFO = [
     links: [
       { label: "Instagram", href: "https://instagram.com/irja_expresslogistic", icon: InstagramIcon },
       { label: "TikTok", href: "https://www.tiktok.com/@irja_express_logistic", icon: TikTokIcon },
+      { label: "Facebook", href: "https://web.facebook.com/profile.php?id=61593916096875", icon: FacebookIcon },
+      { label: "Threads", href: "https://www.threads.com/@irja_expresslogistic", icon: ThreadsIcon },
     ],
   },
 ];
