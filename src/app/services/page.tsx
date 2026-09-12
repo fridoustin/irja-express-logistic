@@ -26,7 +26,7 @@ export default function ServicesPage() {
               <h2>Solusi Pengiriman untuk Setiap Kebutuhan</h2>
               <p>Setiap layanan memiliki halaman detail: deskripsi, keunggulan, area layanan, armada, dan proses kerja.</p>
             </Reveal>
-            <div className="why-grid stagger">
+            <div className="why-grid services-index-grid stagger">
               {SERVICES.map((s) => (
                 <Link
                   key={s.slug}

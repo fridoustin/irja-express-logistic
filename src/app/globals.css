@@ -629,6 +629,10 @@ section {
   margin-bottom: 22px;
   flex: 1;
 }
+.services-index-grid {
+  background: var(--cream);
+  border: none;
+}
 .services-index-card {
   background: var(--white);
 }
