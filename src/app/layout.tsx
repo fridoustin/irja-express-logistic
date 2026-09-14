@@ -29,14 +29,22 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   title: "PT Irja Express Logistic — Solusi Logistik Cepat, Aman & Terpercaya",
   description:
-    "PT Irja Express Logistic adalah perusahaan jasa ekspedisi dan pengiriman barang berbasis di Surabaya, melayani rute darat, laut, dan udara ke seluruh Indonesia.",
+    "PT Irja Express Logistic adalah perusahaan jasa ekspedisi dan pengiriman barang berbasis di Surabaya, melayani rute darat, dan laut ke wilayah Indonesia Timur, khususnya Papua.",
   keywords: [
     "logistik surabaya",
     "ekspedisi surabaya",
     "jasa pengiriman barang",
     "cargo surabaya",
     "irja express",
+    "ekspedisi ke papua",
+    "jasa ekspedisi surabaya",
+    "pengiriman barang ke papua",
+    "ekspedisi murah surabaya",
+    "jasa cargo surabaya",
   ],
+  icons: {
+    icon: "/images/logo.png",
+  },
   openGraph: {
     title: "PT Irja Express Logistic",
     description: "Solusi Logistik Cepat, Aman, dan Terpercaya.",
