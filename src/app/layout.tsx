@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     "jasa cargo surabaya",
   ],
   icons: {
-    icon: "/images/logo.png",
+    icon: "/images/logo-rounded.png",
   },
   openGraph: {
     title: "PT Irja Express Logistic",
