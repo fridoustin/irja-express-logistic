@@ -62,7 +62,7 @@ export async function POST(req: NextRequest) {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        from: `Formulir Kontak Irja Express <onboarding@resend.dev>`,
+        from: `Formulir Kontak Irja Express <info@irjaexpresslogistic.com>`,
         to: [COMPANY_EMAIL],
         reply_to: email,
         subject: `Pesan Baru: ${service || "Kontak"} - ${name}`,

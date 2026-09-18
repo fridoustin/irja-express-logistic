@@ -66,7 +66,7 @@ export async function POST(request: Request) {
     );
 
     const { data, error } = await resend.emails.send({
-      from: "Lamaran Pekerjaan <onboarding@resend.dev>",
+      from: "Lamaran Pekerjaan <info@irjaexpresslogistic.com>",
       to: [COMPANY_EMAIL],
       replyTo: email,
       subject: `Lamaran Kerja - ${escapeHtml(position)} - ${escapeHtml(name)}`,
