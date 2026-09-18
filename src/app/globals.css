@@ -2919,3 +2919,240 @@ footer ul a:hover {
     padding: 0 18px 20px;
   }
 }
+
+/* =========================================
+   CHRISTMAS - SNOW EFFECT
+   ========================================= */
+
+.winter-is-coming {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+/* Base snow layer */
+.snow {
+  position: absolute;
+  inset: 0;
+
+  pointer-events: none;
+
+  background-repeat: repeat;
+  background-position: 0 0;
+  background-size: contain;
+
+  transform: translate3d(0, -100%, 0);
+
+  animation-name: falling;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+/* =========================================
+   NEAR SNOW
+   Large flakes, faster movement
+   ========================================= */
+
+.snow--near {
+  animation-duration: 10s;
+  background-image: url("/seasonal/snow/snow-large.png");
+}
+
+.snow--near.snow--alt {
+  animation-delay: 5s;
+}
+
+/* =========================================
+   MID SNOW
+   Medium flakes, medium speed
+   ========================================= */
+
+.snow--mid {
+  animation-duration: 20s;
+  background-image: url("/seasonal/snow/snow-medium.png");
+}
+
+.snow--mid.snow--alt {
+  animation-delay: 10s;
+}
+
+/* =========================================
+   FAR SNOW
+   Small flakes, slower movement
+   ========================================= */
+
+.snow--far {
+  animation-duration: 30s;
+  background-image: url("/seasonal/snow/snow-small.png");
+}
+
+.snow--far.snow--alt {
+  animation-delay: 15s;
+}
+
+/* =========================================
+   FALLING ANIMATION
+   ========================================= */
+
+@keyframes falling {
+  0% {
+    transform: translate3d(-7.5%, -100%, 0);
+  }
+
+  100% {
+    transform: translate3d(7.5%, 100%, 0);
+  }
+}
+
+/* =========================================
+   ACCESSIBILITY
+   ========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .winter-is-coming {
+    display: none;
+  }
+}
+
+/* =========================================
+   NEW YEAR - FIREWORKS
+   ========================================= */
+
+.new-year-fireworks {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+/* =========================================
+   CHINESE NEW YEAR EFFECT
+   ========================================= */
+
+.cny-container {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.cny-item {
+  position: absolute;
+  inset: 0;
+
+  pointer-events: none;
+
+  background-repeat: repeat;
+  background-position: 0 0;
+  background-size: contain;
+
+  transform: translate3d(0, -100%, 0);
+
+  animation: falling 15s linear infinite;
+  background-image: url("/seasonal/cny/cny-item.png");
+}
+
+.cny-item.cny-item--alt {
+  animation-delay: 7.5s;
+}
+
+/* =========================================
+   ACCESSIBILITY
+   ========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .cny-container {
+    display: none;
+  }
+}
+
+/* =========================================
+   RAMADHAN EFFECT
+   ========================================= */
+
+.ramadhan-container {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.ramadhan-item {
+  position: absolute;
+  inset: 0;
+
+  pointer-events: none;
+
+  background-repeat: repeat;
+  background-position: 0 0;
+  background-size: contain;
+
+  transform: translate3d(0, -100%, 0);
+
+  animation: falling 15s linear infinite;
+  background-image: url("/seasonal/ramadhan/ramadhan-item.png");
+}
+
+.ramadhan-item.ramadhan-item--alt {
+  animation-delay: 7.5s;
+}
+
+/* ACCESSIBILITY */
+@media (prefers-reduced-motion: reduce) {
+  .ramadhan-container {
+    display: none;
+  }
+}
+
+/* =========================================
+   INDEPENDENCE DAY EFFECT
+   ========================================= */
+
+.independence-container {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.independence-item {
+  position: absolute;
+  inset: 0;
+
+  pointer-events: none;
+
+  background-repeat: repeat;
+  background-position: 0 0;
+  background-size: contain;
+
+  transform: translate3d(0, -100%, 0);
+
+  animation: falling 15s linear infinite;
+  background-image: url("/seasonal/independence/independence-item.png");
+}
+
+.independence-item.independence-item--alt {
+  animation-delay: 7.5s;
+}
+
+/* ACCESSIBILITY */
+@media (prefers-reduced-motion: reduce) {
+  .independence-container {
+    display: none;
+  }
+}

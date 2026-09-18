@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Barlow_Condensed, Work_Sans, IBM_Plex_Mono } from "next/font/google";
 import "./globals.css";
+import SeasonalEffects from "@/components/seasonal/SeasonalEffects";
 
 const barlow = Barlow_Condensed({
   subsets: ["latin"],
@@ -61,6 +62,7 @@ export default function RootLayout({
       <body
         className={`${barlow.variable} ${workSans.variable} ${plexMono.variable}`}
       >
+        <SeasonalEffects />
         {children}
       </body>
     </html>
