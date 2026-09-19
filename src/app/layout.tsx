@@ -28,9 +28,11 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://irjaexpresslogistic.com"),
+
   title: "PT Irja Express Logistic — Solusi Logistik Cepat, Aman & Terpercaya",
   description:
-    "PT Irja Express Logistic adalah perusahaan jasa ekspedisi dan pengiriman barang berbasis di Surabaya, melayani rute darat, dan laut ke wilayah Indonesia Timur, khususnya Papua.",
+    "PT Irja Express Logistic adalah perusahaan jasa ekspedisi dan pengiriman barang berbasis di Surabaya, melayani rute darat dan laut ke wilayah Indonesia Timur, khususnya Papua.",
   keywords: [
     "logistik surabaya",
     "ekspedisi surabaya",
@@ -43,14 +45,34 @@ export const metadata: Metadata = {
     "ekspedisi murah surabaya",
     "jasa cargo surabaya",
   ],
+  alternates: {
+    canonical: "/",
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+  },
+
   icons: {
     icon: "/images/logo-rounded.png",
   },
   openGraph: {
-    title: "PT Irja Express Logistic",
-    description: "Solusi Logistik Cepat, Aman, dan Terpercaya.",
+    title: "PT Irja Express Logistic — Solusi Logistik Cepat, Aman & Terpercaya",
+    description:
+      "Jasa ekspedisi dan pengiriman barang terpercaya dari Surabaya ke seluruh wilayah Indonesia Timur dan Papua.",
+    url: "https://irjaexpresslogistic.com",
+    siteName: "PT Irja Express Logistic",
     locale: "id_ID",
     type: "website",
+    images: [
+      {
+        url: "/images/logo.png",
+        width: 1200,
+        height: 630,
+        alt: "PT Irja Express Logistic",
+      },
+    ],
   },
 };
 
