@@ -25,11 +25,12 @@ export async function POST(req: NextRequest) {
 
   const { name, company, email, phone, service, message } = body;
 
-  if (!name || !email || !phone || !message) {
+  if (!name || !phone || !message) {
     return NextResponse.json({ error: "Mohon lengkapi semua kolom wajib." }, { status: 400 });
   }
 
-  if (!isValidEmail(email)) {
+  const cleanEmail = email?.trim() || "";
+  if (cleanEmail && !isValidEmail(cleanEmail)) {
     return NextResponse.json({ error: "Format email tidak valid." }, { status: 400 });
   }
 
@@ -47,7 +48,7 @@ export async function POST(req: NextRequest) {
     <h2>Pesan Baru dari Formulir Kontak Website</h2>
     <p><b>Nama:</b> ${escapeHtml(name)}</p>
     <p><b>Perusahaan:</b> ${escapeHtml(company || "-")}</p>
-    <p><b>Email:</b> ${escapeHtml(email)}</p>
+    <p><b>Email:</b> ${cleanEmail ? escapeHtml(cleanEmail) : "-"}</p>
     <p><b>No. Telepon:</b> ${escapeHtml(phone)}</p>
     <p><b>Jenis Layanan:</b> ${escapeHtml(service || "-")}</p>
     <p><b>Pesan:</b></p>
@@ -64,7 +65,7 @@ export async function POST(req: NextRequest) {
       body: JSON.stringify({
         from: `Formulir Kontak Irja Express <info@irjaexpresslogistic.com>`,
         to: [COMPANY_EMAIL],
-        reply_to: email,
+        reply_to: cleanEmail || COMPANY_EMAIL,
         subject: `Pesan Baru: ${service || "Kontak"} - ${name}`,
         html,
       }),
